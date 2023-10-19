@@ -122,7 +122,7 @@
 // console.log(netTotal());
 
 //=============================================================================
-
+//###Array
 // const shop = ["apple", "orange", "mango"];
 
 // console.log(typeof shop);
@@ -334,6 +334,10 @@ myObj.name = "Lee min ho";
 
 // method
 
+//===================================================
+
+//###DAY 36
+
 // console.log(`something ${(function(){
 //   console.log("IIFE");
 //   return "IIFE";
@@ -372,7 +376,6 @@ myObj.name = "Lee min ho";
 
 // pocketMoney > 5000 ? console.log("watch movie") : console.log("go to school");
 
-
 // Comparison Operators
 // let x = 5;
 // let y = 5;
@@ -396,9 +399,90 @@ myObj.name = "Lee min ho";
 // const money = 10000;
 // money > 50000 ? console.log('go to bar'):console.log('sleep');
 
+//=============================================================================
+
+//## Day 36 ==== october/13/2023 ###Revision Ver
+
+// Function Expression
+
+// const run = function(x,y){
+//   return x+y;
+// }
+
+// console.log(run(3,5));
+
+// Immediately  Invoke Function
+
+// console.log((function(){return 'a'})())
+// console.log((function(){
+//   console.log(1,2,3);
+//   return null;
+// })());
+// console.log(`${(function(){
+//   return 'Na SA'
+// })()} ok`);
+
+// Function invoke another fonction
+//// function print(){
+//   console.log(num());
+// }
+
+// function num(){
+//   return 100;
+// }
+
+// print()
+
+// code block
+// {
+//   let x = 10;
+// }
+// console.log(x);
+
+// function block
+// function run(){
+//   var x = 1;
+// }
+// console.log(x);
+
+// Global Scope
+// let x= 10; //<===== Global Variable
+// {
+//   console.log(x);
+// }
+
+// function run(){
+//   console.log(x);
+// }
+// run();
+
+// console.log(x);
+
+//Function is global Scope
+//  {
+//   function run(){
+//     return 'Hi';
+//   }
+//  }
+//  console.log(run());
+
+//Hoisting Support
+// console.log(x); //<=== variable doesn't have hoisting support
+// let x = 10;
+
+// console.log(y()); // <=== function have hoisting support
+// function y(){
+//   return 'hi';
+// }
+
+// console.log(z());   //<=== function expression does not have hoisting support
+// const z = function(){
+//   return 'z';
+// }
 
 //================================================================================
-// Day-37 Oct/18/2023
+//###### Day 37
+// Oct 17/2023
 
 // condition statement
 
@@ -511,105 +595,101 @@ function bus(no) {
 
 // for loop
 
-      // for (let i = 1; i <= 5; i++) {
-      //   console.log("*");
-      //   console.log("**");
-      //   console.log("***");
-      // }
+// for (let i = 1; i <= 5; i++) {
+//   console.log("*");
+//   console.log("**");
+//   console.log("***");
+// }
 
-      // 1 to 10
-      // 1 ,3 ,5 ,7 ,9
+// 1 to 10
+// 1 ,3 ,5 ,7 ,9
 
-      // for(let i = 1; i <= 10; i++){
-      //   console.log(i);
-      // }
+// for(let i = 1; i <= 10; i++){
+//   console.log(i);
+// }
 
-      // for(let i = 1; i <= 10; i +=2){
-      //   console.log(i);
-      // }
+// for(let i = 1; i <= 10; i +=2){
+//   console.log(i);
+// }
 
-      // 1 to 100
-      // 10,20,30,40,.., 100
+// 1 to 100
+// 10,20,30,40,.., 100
 
-      // for (let i = 10; i <= 100; i += 10) {
-      //   console.log(i);
-      // }
+// for (let i = 10; i <= 100; i += 10) {
+//   console.log(i);
+// }
 
 // =======================Statement Proof // Loop ပတ်ပုံ============================
 
-      // for (
-      //   let i = (function () {
-      //     console.log("State 1");
-      //     return 1;
-      //   })();
-      //   (function () {
-      //     let boo = i <= 5;
-      //     console.log("state 2 is ", boo);
-      //     return boo;
-      //   })();
-      //   (function () {
-      //     console.log("state 3 ");
-      //     return i++;
-      //   })()
-      // ) {
-      //   console.log("code block", i);
-      // }
+// for (
+//   let i = (function () {
+//     console.log("State 1");
+//     return 1;
+//   })();
+//   (function () {
+//     let boo = i <= 5;
+//     console.log("state 2 is ", boo);
+//     return boo;
+//   })();
+//   (function () {
+//     console.log("state 3 ");
+//     return i++;
+//   })()
+// ) {
+//   console.log("code block", i);
+// }
 
 // ===============================================
 
 //stop at 5 (break)
 // skip at 5 (continue)
 
+// for (let i = 1; i <= 10; i++) {
+//   // console.log("code block", i);
 
+//   // if (i === 5) {
+//   //   break;
+//   // }
 
-      // for (let i = 1; i <= 10; i++) {
-      //   // console.log("code block", i);
+//   if (i === 5) {
+//     continue;
+//   }
 
-      //   // if (i === 5) {
-      //   //   break;
-      //   // }
-
-      //   if (i === 5) {
-      //     continue;
-      //   }
-
-      //   console.log("code block", i);
-      // }
+//   console.log("code block", i);
+// }
 
 // =========================================
 // ++++++Array and Obj Loop++++
 
+// const fruits = ["apple","orange","mango","lemon","lime"]
 
-      // const fruits = ["apple","orange","mango","lemon","lime"]
+// const fruits = ["apple", "orange", "banana", "mango", "lime", "lemon"];
+// for (let i = 0; i <= fruits.length; i++) {
+//   console.log(i, fruits[i]);
+// }
 
-
-      // const fruits = ["apple", "orange", "banana", "mango", "lime", "lemon"];
-      // for (let i = 0; i <= fruits.length; i++) {
-      //   console.log(i, fruits[i]);
-      // }
-
-      // console.log(i);
+// console.log(i);
 
 //New Loop
 
 //========Array Loop for( of )=======
 //==========No Index in array loop===========
-      
-      // for(let fruit of fruits){
-      //   console.log(fruit);
-      // }
+
+// for(let fruit of fruits){
+//   console.log(fruit);
+// }
 
 // ========Array Loop for( in )=======
 // ========For ++Array Loop++ with ++Index++=======
 // ========like key and value in obj =======
 
-    // for(let key in fruits){
-    //   console.log(key,fruits[key]);
-    // }
+// for(let key in fruits){
+//   console.log(key,fruits[key]);
+// }
 
-    // for(let fruit in fruits){
-    //   console.log(fruit,fruits[fruit]);
-    // }
+// for(let fruit in fruits){
+//   console.log(fruit,fruits[fruit]);
+// }
 
 // ========Obj Loop for( of )=======
 // const chars ={
@@ -622,7 +702,3 @@ function bus(no) {
 // for(let key in chars){
 //   console.log(key,chars[key]);
 // }
-
-
-
-
