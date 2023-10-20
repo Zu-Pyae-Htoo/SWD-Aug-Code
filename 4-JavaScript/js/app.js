@@ -325,9 +325,9 @@ const myObj = {
 };
 
 // property access
-console.log(myObj.name);
-console.log(myObj.age);
-console.log(myObj.job);
+// console.log(myObj.name);
+// console.log(myObj.age);
+// console.log(myObj.job);
 
 //property overwrite
 myObj.name = "Lee min ho";
@@ -702,3 +702,8 @@ function bus(no) {
 // for(let key in chars){
 //   console.log(key,chars[key]);
 // }
+
+// ==================================================================
+// ####Day-39 Oct/20/2023
+
+//code pen problem solving day
