@@ -343,8 +343,47 @@ const product = [
 
 // ============================================================
 // 4. array 5ခန်း ခွဲထုတ်ပြပါ
+// index 0 to 4 - length 8
 
+// const result = [];
+// let resultIndex = 0;
+// for(let x in points){
+//     if(x < 5){
+//         result[resultIndex++]=points[x];
+//     }
+// }
+
+// for (let x in points) {
+//   if (x < 5) {
+//     result[resultIndex++] = points[x];
+//   }else{
+//     break;
+//   }
+// }
+
+// console.log(points);
+// console.log(result);
+
+// =============================================================
 // 5. ကြိုက်တဲ့ index ကစ ကြိုက်သလောက် အခန်းအရည်အတွက် ခွဲထုတ် နိုင်တဲ့ function
+//index 2 ကနေစပြီး 3 ခန်း
+
+// const arraySlice = function(arr,startIndex,count){
+//     const result =[];
+//     let resultIndex =0;
+//     let endIndex = startIndex + count;
+//     for(let x in arr){
+//         if(x >= startIndex && x < endIndex){
+//             result[resultIndex++]= arr[x];
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(arraySlice(points,2,3));
+
+
+// =====================================================
 // 6. CopyArray, Modified Array, Filter Array
 
 // Problems
