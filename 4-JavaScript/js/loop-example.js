@@ -382,20 +382,146 @@ const product = [
 
 // console.log(arraySlice(points,2,3));
 
-
 // =====================================================
 // 6. CopyArray, Modified Array, Filter Array
 
+// const copyArr = function (arr) {
+//   let result = [];
+//   let resultIndex = 0;
+//   for (let x of arr) {
+//     result[resultIndex++] = x;
+//   }
+//   return result;
+// };
+
+// console.log(copyArr(points));
+// points[2] = 100;
+// console.log(points);
+
+// copyArr() နဲ့ points[] value equal လို့မရ
+
+// const modiArray = function (arr, amount) {
+//   const result = [];
+//   let resultIndex = 0;
+//   for (let x of arr) {
+//     result[resultIndex++] = x + amount;
+//   }
+//   return result;
+// };
+
+// console.log(modiArray(points,10));
+
+// console.table(product);
+// for (let el of product) {
+//   // console.log(el.price);
+
+//   el.price += 10;
+// }
+// console.table(product);
+
+// const buy= function(arr,amount){
+//   for(let x of arr){
+//     x.price += amount;
+//   }
+//   return arr;
+// }
+// console.table(buy(product,400));
+
+// const filterArr = function () {};
+
+// const filterArr = [];
+// let filterArrIndex = 0;
+// for (let filter of product) {
+//   // if (filter.category == "jewelery") {
+//   //   filterArr[filterArrIndex++]= filter;
+//   // }
+//   if(filter.price <= 100){
+//     filter.price += 10; //<==== filter + modified (100 ကျပ်အောက်ကို စစ်ထုတ်ပြီး ၁၀ပေါင်း)
+//     filterArr[filterArrIndex++]= filter;
+//   }
+// }
+// console.table(filterArr);
+// console.table(filterArr);
+
+// =============================================
 // Problems
 // 3 x 3 square လေးဖန်တီးရအောင်
 // * * *
 // * * *
 // * * *
+// let star = "";
+// for (let j = 1; j <= 3; j++) {
+//   for (let i = 1; i <= 3; i++) {
+//     star += "* ";
+//   }
+//   star += "\n";
+// }
+// console.log(star);
+
+// ===============================================
 // n x n square လေးဖန်တီးရအောင်
+
+// const square = function (row, col) {
+//   let string = "";
+//   for (let j = 1; j <= row; j++) {
+//     for (let i = 1; i <= col; i++) {
+//       string += "* ";
+//     }
+//     string += "\n";
+//   }
+//   return string;
+// };
+
+// console.log(square(5, 5));
+// console.log(square(10,10));
+
+// =================================================
+
 // 3row triangle လေးဖန်တီးရအောင်
 // *
 // * *
 // * * *
+
+// let tri = "";
+// // row
+// for (let j = 1; j <= 3; j++) {
+//   // col
+//   for (let i = 1; i <= j; i++) {
+//     tri += "* ";
+//   }
+//   tri += "\n";
+// }
+// console.log(tri);
+
+// ++++++Revert++++++
+// =========================
+// let revert = "";
+// // row
+// for(let j=10;j<=10 && j>0;j--){
+//   // col
+//   for(let i=1; i<=j ;i++){
+//     revert += "* ";
+//   }
+//   revert += "\n";
+// }
+// console.log(revert);
+
+// const triangleHw = function (row) {
+//   let triangle = "";
+//   // row
+//   for (let j = 1; j <= row; j++) {
+//     // col
+//     for (let i = 1; i <= j; i++) {
+//       triangle += "* ";
+//     }
+//     triangle += "\n";
+//   }
+//   return triangle;
+// };
+
+console.log(triangleHw(5));
+console.log(triangleHw(10));
+console.log(triangleHw(20));
 
 const marks = {
   mm: 45,
