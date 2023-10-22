@@ -618,6 +618,7 @@ const student1Mark = [
     subject: "Physics",
     short: "phy",
     mark: 85,
+
   },
   {
     subject: "Biology",
@@ -737,14 +738,67 @@ const allStudentsMark = [
 // Problems
 // 1. marks, studentMark စုစုပေါင်း ရေးပြပါ
 
-let totalMarks = 0;
-for(let x in marks){
-  totalMarks += marks[x];
-}
+// let totalMarks = 0;
+// // for(let x in marks){
+// //   totalMarks += marks[x];
+// // }
+// for(let el of student1Mark){
+//   // console.log(x);
+//   totalMarks += el.mark;
+// }
+
 
 // console.log(totalMarks);
 
+// ==============================================
 // 2. studentMark မှဘာသာရပ်တစ်ခုစီ ကျရှံးတွက်ပေးပါကြရှုံး
+
+
+// for(let el of student1Mark){
+//   if(el.mark >= 40){
+//     el.status = "Passed";
+//   }else{
+//     el.status = "fail";
+//   }
+// }
+
+// console.table(student1Mark)
+
+// for(let x of student1Mark){
+//   if(x.mark >= 40){
+//     x.result = "passed";
+//   }else{
+//     x.result = 'fail';
+//   }
+// }
+// console.table(student1Mark);
+
+// ==============================================
+
 // 3. over all အောင်မြင်၊ ကျရှုံးတွက်ပေးပါ
+
+// let overAll = "Passed";
+// for(let el of student1Mark){
+//   // console.log(el.marks.mark);
+//   if(el.mark >= 40){
+//     el.status = "Passed";
+   
+//   }else{
+//     el.status = "fail";
+//     overAll = "fail";
+//   }
+// }
+
+// console.table(student1Mark);
+// console.table(overAll)
+
+// ================================================
 // 4. ကျောင်းသားအားလုံး အောင်မြင်၊ ကျရှုံးတွက် ပေးပါ
+
+// for(let el of allStudentsMark){
+//     console.log(el.marks[]);
+// }
+
+
+
 // 5. အောင်မြင်တဲ့လူတွေဆို Distinction ပါရင် ထည့်ရည်တွက်ပေးပါ
