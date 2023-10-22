@@ -475,6 +475,47 @@ const product = [
 // console.log(square(5, 5));
 // console.log(square(10,10));
 
+
+// ================Chess========================
+// const chess = function (row, col) {
+//   let result = "";
+
+  
+//   for (let j = 1; j <= row; j++) {
+//     //row even
+//     if (j % 2 == 0) {
+//       for (let i = 1; i <= col; i++) {
+//         // even of row even 
+//         if (i % 2 == 0) {
+//           result += "⬜";
+//         } 
+//         // odd of row even         
+//         else {
+//           result += "⬛";
+//         }
+//       }
+      
+//     } 
+//     //row odd
+//     else {
+//       for (let i = 1; i <= col; i++) {
+//         //even of row odd
+//         if (i % 2 == 0) {
+//           result += "⬛";
+//         } 
+//         //odd of row odd
+//         else {
+//           result +="⬜" ;
+//         }
+//       }
+      
+//     }
+//     result += "\n";
+//   }
+
+//   return result;
+// };
+// console.log(chess(15, 15));
 // =================================================
 
 // 3row triangle လေးဖန်တီးရအောင်
@@ -519,9 +560,9 @@ const product = [
 //   return triangle;
 // };
 
-console.log(triangleHw(5));
-console.log(triangleHw(10));
-console.log(triangleHw(20));
+// console.log(triangleHw(5));
+// console.log(triangleHw(10));
+// console.log(triangleHw(20));
 
 const marks = {
   mm: 45,
