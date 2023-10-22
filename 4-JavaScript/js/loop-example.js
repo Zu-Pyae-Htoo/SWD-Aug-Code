@@ -538,7 +538,7 @@ const product = [
 // =========================
 // let revert = "";
 // // row
-// for(let j=10;j<=10 && j>0;j--){
+// for(let j=10;j>=1;j--){
 //   // col
 //   for(let i=1; i<=j ;i++){
 //     revert += "* ";
@@ -560,9 +560,28 @@ const product = [
 //   return triangle;
 // };
 
+// const revertTri = function(num){
+//   let result = "";
+//   for(let j =num;j >= 1;j-- ){
+//     for(let i=1;i<= j;i++ ){
+//         result += "* "
+//     }
+//     result += '\n';
+//   }
+//   return result;
+// }
+
 // console.log(triangleHw(5));
 // console.log(triangleHw(10));
 // console.log(triangleHw(20));
+
+// console.log(revertTri(20));
+// console.log(revertTri(15));
+// console.log(revertTri(10));
+
+
+// ============================================================
+
 
 const marks = {
   mm: 45,
