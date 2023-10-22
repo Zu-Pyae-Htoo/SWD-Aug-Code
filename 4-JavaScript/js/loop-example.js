@@ -475,39 +475,38 @@ const product = [
 // console.log(square(5, 5));
 // console.log(square(10,10));
 
-
 // ================Chess========================
 // const chess = function (row, col) {
 //   let result = "";
- 
+
 //   for (let j = 1; j <= row; j++) {
 //     //row even
 //     if (j % 2 == 0) {
 //       for (let i = 1; i <= col; i++) {
-//         // even of row even 
+//         // even of row even
 //         if (i % 2 == 0) {
 //           result += "⬜";
-//         } 
-//         // odd of row even         
+//         }
+//         // odd of row even
 //         else {
 //           result += "⬛";
 //         }
 //       }
-      
-//     } 
+
+//     }
 //     //row odd
 //     else {
 //       for (let i = 1; i <= col; i++) {
 //         //even of row odd
 //         if (i % 2 == 0) {
 //           result += "⬛";
-//         } 
+//         }
 //         //odd of row odd
 //         else {
 //           result +="⬜" ;
 //         }
 //       }
-      
+
 //     }
 //     result += "\n";
 //   }
@@ -580,9 +579,7 @@ const product = [
 // console.log(revertTri(15));
 // console.log(revertTri(10));
 
-
 // ============================================================
-
 
 const marks = {
   mm: 45,
@@ -618,7 +615,6 @@ const student1Mark = [
     subject: "Physics",
     short: "phy",
     mark: 85,
-
   },
   {
     subject: "Biology",
@@ -747,12 +743,10 @@ const allStudentsMark = [
 //   totalMarks += el.mark;
 // }
 
-
 // console.log(totalMarks);
 
 // ==============================================
 // 2. studentMark မှဘာသာရပ်တစ်ခုစီ ကျရှံးတွက်ပေးပါကြရှုံး
-
 
 // for(let el of student1Mark){
 //   if(el.mark >= 40){
@@ -782,7 +776,7 @@ const allStudentsMark = [
 //   // console.log(el.marks.mark);
 //   if(el.mark >= 40){
 //     el.status = "Passed";
-   
+
 //   }else{
 //     el.status = "fail";
 //     overAll = "fail";
@@ -795,10 +789,44 @@ const allStudentsMark = [
 // ================================================
 // 4. ကျောင်းသားအားလုံး အောင်မြင်၊ ကျရှုံးတွက် ပေးပါ
 
-// for(let el of allStudentsMark){
-//     console.log(el.marks[]);
+// for(let std of allStudentsMark){
+//   console.log(std);
+//   std.status = "Passed";
+//   for(let sub of std.marks){
+//     if(sub.mark < 40){
+//       std.status = 'Fail';
+//     }
+//   }
+
 // }
+// console.table(allStudentsMark)
 
 
+// console.table(allStudentsMark);
+// for(let std of allStudentsMark){
+//   console.log(std);
+//   std.status = "Passed";
+//   for(let sub of std.marks){
+//     if(sub.mark <40 ){
+//       std.status = "Fail";
+//     }
+//   }
+// }
+// console.table(allStudentsMark);
 
 // 5. အောင်မြင်တဲ့လူတွေဆို Distinction ပါရင် ထည့်ရည်တွက်ပေးပါ
+
+// for (let std of allStudentsMark) {
+//   std.status = "Passed";
+//   std.distinction = 0;
+//   for (let sub of std.marks) {
+//     if (sub.mark < 40) {
+//       std.status = "Fail";
+//     } else if (sub.mark >= 80) {
+//       std.distinction += 1;
+//     }
+//   }
+// }
+// console.table(allStudentsMark);
+
+// =========================================
