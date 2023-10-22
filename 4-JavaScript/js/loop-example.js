@@ -479,8 +479,7 @@ const product = [
 // ================Chess========================
 // const chess = function (row, col) {
 //   let result = "";
-
-  
+ 
 //   for (let j = 1; j <= row; j++) {
 //     //row even
 //     if (j % 2 == 0) {
@@ -515,7 +514,9 @@ const product = [
 
 //   return result;
 // };
+// console.log(chess(10, 10));
 // console.log(chess(15, 15));
+// console.log(chess(20, 20));
 // =================================================
 
 // 3row triangle လေးဖန်တီးရအောင်
@@ -560,6 +561,10 @@ const product = [
 //   return triangle;
 // };
 
+// console.log(triangleHw(5));
+// console.log(triangleHw(10));
+// console.log(triangleHw(20));
+
 // const revertTri = function(num){
 //   let result = "";
 //   for(let j =num;j >= 1;j-- ){
@@ -570,10 +575,6 @@ const product = [
 //   }
 //   return result;
 // }
-
-// console.log(triangleHw(5));
-// console.log(triangleHw(10));
-// console.log(triangleHw(20));
 
 // console.log(revertTri(20));
 // console.log(revertTri(15));
@@ -735,6 +736,14 @@ const allStudentsMark = [
 
 // Problems
 // 1. marks, studentMark စုစုပေါင်း ရေးပြပါ
+
+let totalMarks = 0;
+for(let x in marks){
+  totalMarks += marks[x];
+}
+
+// console.log(totalMarks);
+
 // 2. studentMark မှဘာသာရပ်တစ်ခုစီ ကျရှံးတွက်ပေးပါကြရှုံး
 // 3. over all အောင်မြင်၊ ကျရှုံးတွက်ပေးပါ
 // 4. ကျောင်းသားအားလုံး အောင်မြင်၊ ကျရှုံးတွက် ပေးပါ
