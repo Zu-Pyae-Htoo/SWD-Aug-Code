@@ -58,7 +58,7 @@ console.log("JS OOP");
 // const st1 = new Student("Zaw Zaw", 1996, "male","web",["html,css,javaScript "]);
 // console.log(st1);
 
-// const st2 = new Student("Mya Mya",2000,"Female","android",["Java","Koklin"])
+// const st2 = new Student("Mya Mya",2000,"Female","android",["Java","Kotlin"])
 // console.log(st2);
 //class  => obj (instantiate)/ instance ဆောက် ==> class ကိုသုံးချင်ရင် obj ကို instance ဆောက်သုံး
 
