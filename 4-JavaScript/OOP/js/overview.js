@@ -14,26 +14,27 @@ console.log("JS OOP");
 //     }
 // }
 
-// class Person {
-//   // name;
-//   // dob;
-//   // gender;
-//   // constructor(x,y){
-//   //     //constructor က obj instance ဆောက်တာနဲ့ အလုပ်လုပ်တယ်
-//   //     console.log("I'm constructor",x,y);
-//   // }
-
-//   // constructor (){  <===== constructor မှာ value အပြီးသတ်မှတ်လို့မရ
-//   //     this.name = "Mg Mg",
-//   //     this.dob = "1995",
-//   //     this.gender = "male"}
-
-//   constructor(name, dob, gender) {
-//     //data initialize
-//     (this.name = name), (this.dob = dob), (this.gender = gender);
-//     this.namePrefix = this.gender == "male" ? "Mg" : "Ma";
-//     this.age = 2023 - this.dob;
+class Person {
+  name;
+  dob;
+  gender;
+//   constructor(x,y){
+//       //constructor က obj instance ဆောက်တာနဲ့ အလုပ်လုပ်တယ်
+//       console.log("I'm constructor",x,y);
 //   }
+
+//   constructor (){ 
+//     //<===== constructor မှာ value အပြီးသတ်မှတ်လို့မရ
+//       this.name = "Mg Mg",
+//       this.dob = "1995",
+//       this.gender = "male"}
+
+  constructor(name, dob, gender) {
+    //data initialize
+    (this.name = name), (this.dob = dob), (this.gender = gender);
+    this.namePrefix = this.gender == "male" ? "Mg" : "Ma";
+    this.age = 2023 - this.dob;
+  }
 //   intro() {
 //     //my name is zph and i was born in 1994;
 //     return `My name is ${this.namePrefix} ${this.name} and I was born in ${this.dob} `;
@@ -44,15 +45,17 @@ console.log("JS OOP");
 //   sleep() {
 //     return "Person can sleep";
 //   }
-// }
+ }
 
-// class Student extends Person {
-//   constructor(name, dob, gender, sub, major) {
-//         super(name,dob,gender);
-//         this.major = major;
-//         this.sub = sub;
-//   }
-// }
+class Student extends Person {
+  constructor(name, dob, gender, sub, major) {
+        super(name,dob,gender);
+        this.major = major;
+        this.sub = sub;
+  }
+}
+
+
 
 
 // const st1 = new Student("Zaw Zaw", 1996, "male","web",["html,css,javaScript "]);
@@ -91,3 +94,15 @@ console.log("JS OOP");
 // console.log(p2);
 
 // console.log(Person);
+
+
+
+class Monitor extends Student{
+    constructor(name, dob, gender, sub, major,roomNo){
+        super(name, dob, gender, sub, major)
+        this.roomNo = roomNo;
+    }
+}
+
+const monitor = new Monitor("ko ko",1998,"male","web",["js","java"],"SWDAug");
+console.log(monitor);
