@@ -1,4 +1,4 @@
-const str = new String("     I'm hein htet zan from mms it   ");
+const str = new String("I'm hein htet zan from mms it");
 console.log(str);
 // console.log(str[14]);
 // console.log(str[15]);
@@ -41,3 +41,11 @@ console.log(str);
 // const num = "1";
 // const text = num.padEnd(8,"0");
 // console.log(text);
+
+
+// const num = '1';
+// const test = num.padEnd(4,'0');
+// console.log(test);
+
+//string to array
+// console.log(str.split(""));
