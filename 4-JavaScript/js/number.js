@@ -1,7 +1,7 @@
 // console.dir(Number);
 
-const num = new Number("5674.3385");
-console.log(num);
+// const num = new Number("5674.3385");
+// console.log(num);
 
 // console.log(num.toString());
 //console.log(num.toFixed(3)); <= ဒဿမနေရာဖြတ်
@@ -21,5 +21,22 @@ console.log(num);
 
 //Math method
 // ===============
-// console.log(Math.round(123.85)); <= အကြမ်းဖျင်း
-// console.log(Math.floor(124.85)); <= အောက်ကိုပဲယူ 
+// console.log(Math.round(123.85)); <= အနီးစပ်ဆုံးကိုယူ
+// console.log(Math.floor(124.85)); //<= အောက်ကိုပဲယူ 0 to 9 ကို
+// console.log(Math.ceil(1234.567));//<= အထက်ကိုယူ
+
+
+// 0-10
+// console.log(Math.round(Math.random()*10));
+
+// 1-10
+// console.log(Math.ceil(Math.random()*10));
+
+//0-9
+// console.log(Math.floor(Math.random()*10));
+
+
+//String working funct
+// console.log(eval('5*3'));
+
+
