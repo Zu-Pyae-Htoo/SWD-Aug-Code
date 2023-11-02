@@ -399,3 +399,110 @@ const product = [
 // ==============
 // console.log(fruits.toString());
 // console.log(fruits.join(", "));
+
+//push,pop,unshift,shift
+// =========================
+console.log(fruits);
+
+// push <== insert items to array from last
+// ======
+
+// console.log(fruits.push("aaa","bbb","ccc"));
+// console.log(fruits.push("aaa"));
+// console.log(fruits.push("bbb"));
+// console.log(fruits.push("ccc"));
+
+// pop  <== remove items from last
+// =======
+
+// console.log(fruits.pop(),fruits.pop(),fruits.pop());
+// console.log(fruits.pop());
+// console.log(fruits.pop());
+// console.log(fruits.pop());
+
+// console.log(fruits);
+
+// unshift
+// ==========
+
+// console.log(fruits.unshift("aaa","bbb","ccc"));
+// console.log(fruits.unshift("aaa"));
+// console.log(fruits.unshift("bbb"));
+// console.log(fruits.unshift("ccc"));
+
+// shift <== remove items from start
+// =====================================
+
+// console.log(fruits.shift());
+// console.log(fruits.shift());
+// console.log(fruits.shift());
+
+//unshift <== insert items from start
+// =====================================
+// console.log(fruits.unshift("aaa","bbb","ccc"));
+
+// console.log(fruits.unshift("aaa"));
+// console.log(fruits.unshift("bbb"));
+// console.log(fruits.unshift("ccc"));
+// console.log(fruits);
+
+// sort <= array ရဲ့ element --> convert to string --> string ကို compare to sequence of UTF code of Numb---> ပြီးရင် Numb value အလိုက် array elements ကို ascending ငယ်စဥ်ကြီးလိုက်စီမယ်
+// =======
+
+// console.log(fruits.sort()); <= normal 
+
+// const fruits1 = ["apple","orange","Mango","lemon","Lime"]; <= capital word
+// console.log(fruits1.sort());
+
+// const fruit2 = ["apple","orange","mango","lemon","lime","ဟဲလို","123","!"];
+// console.log(fruit2.sort());
+
+
+//UTF code Numb စစ်နည်း
+// console.log('1'.charCodeAt());
+// console.log('a'.charCodeAt());
+// console.log('A'.charCodeAt());
+// console.log('က'.charCodeAt());
+
+//Array.include() ပါမပါ စစ်တာ
+// ==================
+
+// console.log(fruits.includes('apple'));
+// console.log(fruits.includes('aaa'));
+
+//array.indexOf() ရှာတာပါရင် index ပြ မပါရင် -1 ပြ
+// ==============================
+
+// console.log(fruits.indexOf('apple'));
+// console.log(fruits.indexOf('zph'));
+
+//array.slice() <= startIndex ကနေ endIndex မတိုင်ခင်ထိ  slice(startIndex , endIndex)
+// ================
+
+// console.log(fruits.slice(1,3));
+// console.log([1,2,3,4,5].slice(0,3));
+
+// console.log(fruits);
+
+// Array.splice() <== splice(startIndex, deletCount) မူရင်းarray ပြောင်းလဲမှုရှိနိုင်
+// ==================
+// console.log(fruits.splice(1, 5));
+// console.log(fruits.splice(1,5,"aaa","bbb","ccc")); ဖြုတ်လိုက်တဲ့နေရာ ပြန်ထည့်
+
+// console.log(fruits);
+
+// concat <== Array element အချင်းချင်း တွေကို concat လုပ်မယ်
+// =========
+
+// console.log(fruits.concat(points));
+// console.log(fruits.concat(points).concat(fruits));
+
+// spread operator <= ... ဒီarray ထဲက element ကိုပေါင်း
+// ===================
+
+// const arr = [...points , ... fruits];
+// console.log(arr);
+
+// const arr2 = ["zzz",...points , "aaa",...fruits]
+// console.log(arr2);
+
