@@ -854,6 +854,23 @@ const product = [
 //   return el;
 // }));
 
+// Filter 
+// ============
+//return အကုန် မပြန် စစ်ထုတ်ပြီးမှပြန်
+
+// console.table(points);
+
+// console.log(points.filter(el=>{
+//   console.log(el);
+//   //return condition
+//   //return true; <= trueဆိုအကုန်ပြန်
+//   //return false; <=false ဆိုဘာမှမပြန်
+//   return el<50;
+// }));
+
+// console.table(product);
+// console.table(product.filter(el => el.price<50));
+
 
 
 
