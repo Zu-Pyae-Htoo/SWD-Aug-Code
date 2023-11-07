@@ -1,5 +1,5 @@
-const str = new String("I'm hein htet zan from mms it");
-console.log(str);
+// const str = new String("I'm hein htet zan from mms it");
+// console.log(str);
 // console.log(str[14]);
 // console.log(str[15]);
 // console.log(str[16]);
