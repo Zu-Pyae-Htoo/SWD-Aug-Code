@@ -872,8 +872,20 @@ const product = [
 // console.table(product.filter(el => el.price<50));
 
 
+// console.table(product.filter(el=> el.id === 7));
+
+//id 7 or id 10
+// console.table(product.filter(el => el.id===7 || el.id === 10));
+
+// price under 100 & good rating
+// console.table(product.filter(el => el.price < 100 && el.rating.rate > 4));
+
+// console.table(product.filter(el => el.title.toLowerCase().search("gaming") != -1));
+
+// console.table(product.filter(el => el.title.toLowerCase().search("wd") != -1 || el.description.toLowerCase().search("gaming") != -1));
 
 
-
+// const scope = [7,10,15,2,6];
+// console.table(product.filter(el => scope.includes(el.id)));
 
 
