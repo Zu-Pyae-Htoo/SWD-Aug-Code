@@ -888,4 +888,70 @@ const product = [
 // const scope = [7,10,15,2,6];
 // console.table(product.filter(el => scope.includes(el.id)));
 
+//Find
+// =======
+//Array ထဲမှာတခန်းချင်းစီloopပတ်ပြီးရှာတယ်။ တွေ့တာနဲ့ရပ်လိုက်တယ်၊ ဆက်မပတ်တော့ဘူး။
+
+// console.log(points.find(el => {
+//   console.log(el);
+//   return el === 52;
+// }));
+
+// FindIndex
+// =============
+//Find လိုပဲ
+
+// console.log(points.findIndex(el => {
+//   console.log(el);
+//   return el === 500;
+// }));
+
+// console.log(product.find(el => el.id === 7 ));//လိုချင်တာ တန်းထုတ်ပေး
+// console.log(product.filter(el => el.id === 7));//New Array ပြန်
+
+// Reduce 
+// ==========
+
+// console.log(points.reduce((pv,cv)=>{
+//   console.log(pv,cv);
+//   return pv + package;
+// },0));
+
+// console.log(points.reduce((pv,cv)=>pv+pc,0));
+
+// console.log(product.reduce((pv,cv)=>pv + cv.price,0));
+
+// Reduce from youtube
+// =======================
+const items = [
+  {name : "Rice", price : 5},
+  {name : "Book", price : 20},
+  {name : "Chicken", price : 10},
+  {name : "Monitor", price : 100}
+]
+
+// let totalPrice = 0;
+// items.forEach(item => {
+//   totalPrice += item.price;
+// })
+// console.log(totalPrice);
+
+// console.log(items.reduce((total,item)=>{
+//   console.log('total ' + total);
+//   console.log('item ' + item.price);
+//   return item.price + total;
+// },0 ));// default value = 0 ,100,1000 
+
+// every
+// ==========
+//condition စစ်တာမျိုးပဲ
+
+// console.log(points.every(el => el<100));
+
+//some
+// =======
+//condition စစ်တာမျိုးပဲ
+
+// console.log(points.some(el => el > 100));
+// ===========================================================
 
