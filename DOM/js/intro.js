@@ -83,3 +83,33 @@
 
 //list ကို innerText ဆို html element ပါပေါ်
 //list ကို innerHtml မှ bullet နဲ့ပေါ်
+
+// select.innerText = "new text";****
+// select.innerHTML = "<li>new </li>" <= new element ရမယ် ****
+
+// ==========================================================
+
+// Event
+// ==========
+//onclick = fun()
+//ondblclick = fun()
+
+const heading = document.getElementById("heading");
+
+
+// const run = ()=>{
+//     heading.innerText = "OK NA SA"
+// }
+
+// const funRun = () => {
+//    heading.innerText = input.value;
+//    input.value = null;
+// }
+
+const listGroup = document.getElementById("listGroup");
+const addList = () =>{
+  listGroup.innerHTML  += `<li>${input.value}</li>`;
+  input.value = null;
+}
+
+

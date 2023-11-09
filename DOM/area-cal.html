@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: inline-block;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Area Caculator</h1>
+    <div>
+      <p id="result">
+        Result :
+        <span id="output"></span>
+      </p>
+      <button>Store</button>
+      <button>ClearAll</button>
+    </div>
+    <div class="">
+      <input type="number" id="width" placeholder="width in ft" />
+      <input type="number" id="breadth" placeholder="breadth in ft" />
+      <button onclick="caculateArea()">Caculate</button>
+    </div>
+
+    <ul>
+      <li>15ft * 50ft = 750 sqft</li>
+    </ul>
+
+    <script src="./js/area-cal.js"></script>
+  </body>
+</html>
