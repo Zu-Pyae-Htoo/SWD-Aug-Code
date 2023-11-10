@@ -29,7 +29,7 @@
 
 // const heading = document.getElementById("heading");
 // const para = document.getElementById("para");
-// const googleLink = document.getElementById("googleLink");
+const googleLink = document.getElementById("googleLink");
 // const listGroup = document.getElementById("linkGroup");
 // const input = document.getElementById("input");
 // const btn = document.getElementById("btn");
@@ -106,10 +106,16 @@ const heading = document.getElementById("heading");
 //    input.value = null;
 // }
 
-const listGroup = document.getElementById("listGroup");
-const addList = () =>{
-  listGroup.innerHTML  += `<li>${input.value}</li>`;
-  input.value = null;
-}
+// const listGroup = document.getElementById("listGroup");
+// const addList = () =>{
+//   listGroup.innerHTML  += `<li>${input.value}</li>`;
+//   input.value = null;
+// }
 
+// ================================================
+// Day47 Nov10
 
+// console.dir(googleLink.target);
+
+// const poeImage = document.getElementById("poeImg");
+// console.dir(poeImage);
