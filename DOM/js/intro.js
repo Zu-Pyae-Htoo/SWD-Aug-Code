@@ -119,3 +119,7 @@ const heading = document.getElementById("heading");
 
 // const poeImage = document.getElementById("poeImg");
 // console.dir(poeImage);
+
+// console.dir(heading.outerHTML);
+
+
