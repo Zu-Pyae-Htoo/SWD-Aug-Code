@@ -115,11 +115,37 @@ const heading = document.getElementById("heading");
 // ================================================
 // Day47 Nov10
 
-// console.dir(googleLink.target);
+
+/*
+
+DOM => document obj model
+HTML element => Js obj
+html content , attribute , value , style => property / method
+eg.
+heading.id , ul.name , image.width
+
+*/
+
+/*
+console.dir(heading.id);
+
+console.dir(googleLink.target);
+console.dir(googleLink.href);
+
+const poeImage = document.getElementById("poeImg");
+console.dir(poeImage);
+console.log(poeImage.style.borderTopWidth);
+console.log(poeImage.width);
+
+const listGroup = document.getElementById("listGroup")
+console.dir(listGroup);
+*/
+
+// Get and Set Html Attribute
+// =========================
+
+// googleLink.href = "https://mms-it.com"
 
 // const poeImage = document.getElementById("poeImg");
-// console.dir(poeImage);
-
-// console.dir(heading.outerHTML);
-
-
+// console.log(poeImage.src);
+// poeImage.src = "./assets/images/love.gif"
