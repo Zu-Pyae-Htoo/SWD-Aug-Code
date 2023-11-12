@@ -141,7 +141,7 @@ const listGroup = document.getElementById("listGroup")
 console.dir(listGroup);
 */
 
-// Get and Set Html Attribute
+// Attribute Get and Set 
 // =========================
 
 // googleLink.href = "https://mms-it.com"
@@ -169,7 +169,7 @@ console.dir(listGroup);
 //     poeImage.width -= 10;
 // }
 
-// set style attribute
+// set attribute style
 // ======================
 
 /*

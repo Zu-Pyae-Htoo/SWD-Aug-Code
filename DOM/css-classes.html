@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../dist/output.css">
-</head>
-<body>
-    <div class=" p-10">
-        <h1 class="" id="heading">Hello</h1>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <div class="p-10">
+      <h1
+        class="text-3xl text-blue-600 font-serif font-semibold uppercase bg-orange-500 p-5 text-center border-4 border-blue-600 duration-300 -translate-x-[120%]"
+        id="heading"
+      >
+        Hello
+      </h1>
     </div>
+    <button
+      onclick="hide()"
+      class="bg-blue-600 text-center px-5 py-2 text-white"
+    >
+      Hide
+    </button>
+    <button
+      onclick="show()"
+      class="bg-blue-600 text-center px-5 py-2 text-white"
+    >
+      Show
+    </button>
+    <button
+      onclick="toggle()"
+      class="bg-blue-600 text-center px-5 py-2 text-white"
+    >
+      Toggle
+    </button>
+
     <script src="./js/css-classes.js"></script>
-</body>
+  </body>
 </html>
