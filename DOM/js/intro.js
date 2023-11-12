@@ -148,4 +148,24 @@ console.dir(listGroup);
 
 // const poeImage = document.getElementById("poeImg");
 // console.log(poeImage.src);
-// poeImage.src = "./assets/images/love.gif"
+// poeImage.src = "./assets/images/love.gif";
+
+// New way of getting  and setting method
+// =========================================
+// console.dir(poeImage.width);
+// console.log(poeImage.getAttribute("src"));
+// poeImage.setAttribute("src","./assets/images/poe-mamhe-thar-3.jpeg");
+// poeImage.setAttribute("width","500")
+
+// poeImage.height += 100;
+// poeImage.height += 100;
+// poeImage.height += 100;
+
+
+// const zoomIn = () => {
+//     poeImage.width += 10;
+// }
+// const zoomOut= () => {
+//     poeImage.width -= 10;
+// }
+
