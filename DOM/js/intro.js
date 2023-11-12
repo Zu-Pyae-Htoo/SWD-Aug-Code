@@ -169,3 +169,8 @@ console.dir(listGroup);
 //     poeImage.width -= 10;
 // }
 
+// set style attribute
+// ======================
+
+// console.log(heading.style);
+
