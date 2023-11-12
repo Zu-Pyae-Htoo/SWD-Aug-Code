@@ -90,7 +90,7 @@ const googleLink = document.getElementById("googleLink");
 // ==========================================================
 
 // Event
-// ==========
+// ===============================
 //onclick = fun()
 //ondblclick = fun()
 
@@ -172,5 +172,34 @@ console.dir(listGroup);
 // set style attribute
 // ======================
 
+/*
+
+****Gabage Case**** => CSS
+ text-align: center ; background-color : green;
+
+****Camel Case**** => JavaScript
+textAlign = center; backgroundColor = green;
+
+*/
+
 // console.log(heading.style);
+// heading.style.backgroundColor = "green";
+// heading.innerText = "I'm hungry";
+// heading.style.textAlign = "center";
+
+// DOM token list prototype
+// =========================
+
+// console.dir(heading.classList);
+// heading.classList.add("a","b","c")
+// heading.classList.remove("x","y")
+// heading.classList.replace("x","a")
+// console.log(heading.classList.contains("x"));
+// console.log(heading.classList.contains("a"));
+
+// heading.classList.toggle("a");
+// heading.classList.toggle("a");
+// heading.classList.toggle("a");
+// heading.classList.toggle("a");
+
 
