@@ -96,7 +96,6 @@ const googleLink = document.getElementById("googleLink");
 
 const heading = document.getElementById("heading");
 
-
 // const run = ()=>{
 //     heading.innerText = "OK NA SA"
 // }
@@ -114,7 +113,6 @@ const heading = document.getElementById("heading");
 
 // ================================================
 // Day47 Nov10
-
 
 /*
 
@@ -141,7 +139,7 @@ const listGroup = document.getElementById("listGroup")
 console.dir(listGroup);
 */
 
-// Attribute Get and Set 
+// Attribute Get and Set
 // =========================
 
 // googleLink.href = "https://mms-it.com"
@@ -160,7 +158,6 @@ console.dir(listGroup);
 // poeImage.height += 100;
 // poeImage.height += 100;
 // poeImage.height += 100;
-
 
 // const zoomIn = () => {
 //     poeImage.width += 10;
@@ -202,4 +199,35 @@ textAlign = center; backgroundColor = green;
 // heading.classList.toggle("a");
 // heading.classList.toggle("a");
 
+// select with HTML tagName
+// ========================
+
+/* 
+element တွေအများကြီးလိုချင်ရင် html tag နဲ့ဖမ်း => Html collection ရ <array like obj array မဟုတ်> => index နဲ့ ဖမ်းပြီး innerText,innerHtml,etc ကြိုက်တာပြင်
+
+prototype => HTMLCollection 
+*/
+
+
+
+/*
+const lis = document.getElementsByTagName("li");
+console.log(lis);
+console.log(lis[0]);
+console.log(lis[0].innerText);
+console.log(lis[1].innerText);
+console.log(lis[2].innerText);
+*/
+
+// select with querySelector or querySelectorAll
+// ================================================
+
+/*
+ prototype => NodeList prototype
+ querySelector & querySelectorAll(" CSS selector")  
+ query & query all ကို css selector နဲ့ပဲ ရွေးတယ်
+*/
+
+// const lis = document.querySelectorAll("li");
+// console.log(lis);
 
