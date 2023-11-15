@@ -235,7 +235,7 @@ console.log(lis[2].innerText);
 // ==========================================
 
 /*
-    No-1
+No-1
     query က CSS selector အတိုင်းပဲ 
 
     const lis = document.querySelectorAll("li.fruit");
@@ -245,20 +245,48 @@ console.log(lis[2].innerText);
 
 
 /*
-    No-2
-    pseudoClass and query 
-    ====================== 
+No-2
+ pseudoClass and query 
+ ====================== 
     querySelector နဲ့ attribute ကို ဖမ်းပြီး pseudo class နဲ့ checkedလုပ်ထားတာကိုကြည့်
 
-    checked ဖြစ်နေတဲ့ ele ကို စစ် 
-    ========================
+ checked ဖြစ်နေတဲ့ ele ကို စစ် 
+ ========================
     const radios = document.querySelector(`[name=gender]:checked`);
 */
 
 /*
-    No-3
+No-3
     document.querySelectorAll(`[name='nation'] option`).value //choose ထားတာရ
     document.querySelectorAll(`[name='nation'] option:selected`).value // dont know yet
 */
 
-// to =>  element.html 
+// to =>  element.html / element.js
+
+/*
+No-8
+====
+ remove()
+ ========
+    id.remove();
+    poeImg.remove();
+    fruitList.remove();
+
+ removeChild()
+ =============
+    id.removeChild(id.children[index]);
+
+    fruitList.removeChild(fruitList.children[2]) // remove Mango
+    listGroup.removeChild(listGroup.children[0]) // remove Mg Mg
+
+*/
+
+/*
+No-9
+ Event Handling
+ ==============
+   html attribute, property, method
+
+    to ==> event-handling.js / event-handling.html
+*/
+
