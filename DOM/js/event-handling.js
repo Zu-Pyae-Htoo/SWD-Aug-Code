@@ -19,4 +19,41 @@ No-9
 
 */
 
+// const heading = document.querySelector("#heading");
+// heading.addEventListener("click",() => {
+//     console.log("u click");
+// })
 
+// heading.addEventListener("mouseenter",() => {
+//     console.log("mouse enter");
+    
+// })
+
+// heading.addEventListener("mouseout",() => {
+//     console.log("mouse out");
+// })
+
+// heading.addEventListener("mousemove",() => {
+//     console.log("mouse move");
+// })
+
+const input = document.querySelector("#input");
+// input.addEventListener("focus",() => {
+//     console.log("focus");
+// })
+
+// input.addEventListener("blur",() => {
+//     console.log("blur");
+// })
+
+// input.addEventListener("change",() => {
+//     console.log("change");
+// })
+
+input.addEventListener("keyup",() => {
+    console.log("key up");
+})
+
+// input.addEventListener("keydown",() => {
+//     console.log("key ");
+// })
