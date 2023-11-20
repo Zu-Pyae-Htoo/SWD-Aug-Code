@@ -55,5 +55,5 @@ input.addEventListener("keyup",() => {
 })
 
 // input.addEventListener("keydown",() => {
-//     console.log("key ");
+//     console.log("key down ");
 // })
