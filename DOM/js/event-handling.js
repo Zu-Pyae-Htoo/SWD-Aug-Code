@@ -57,3 +57,13 @@ input.addEventListener("keyup",() => {
 // input.addEventListener("keydown",() => {
 //     console.log("key down ");
 // })
+
+const nation = document.querySelector('#nation');
+
+// nation.addEventListener("change",() => {
+//     console.log(nation.value);
+// })
+
+// input.addEventListener("change",() => {
+//     console.log(input.files[0]);
+// })
