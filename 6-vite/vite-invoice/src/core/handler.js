@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { templateUI } from "../app/products";
 import { calRecordTotal, recordUI, updateRecord } from "../app/record";
 import {
@@ -69,8 +70,19 @@ export const recordFormHandler = (event) => {
 //delete,increase,decrease button
 export const recordGroupHandler = (event) => {
   if (event.target.classList.contains("record-del")) {
-    event.target.closest("tr").remove();
-    calRecordTotal();
+    Swal.fire({
+      title: "Are you sure you want to delete?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        event.target.closest("tr").remove();
+      }
+    });
   } else if (event.target.classList.contains("add-q")) {
     const id = event.target.closest("tr").getAttribute("product-id");
     updateRecord(id, 1);
