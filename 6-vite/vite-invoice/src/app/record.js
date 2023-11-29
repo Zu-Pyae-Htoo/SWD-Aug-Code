@@ -1,4 +1,17 @@
-import { recordTotal, templateForRecordList } from "../core/selector";
+import { recordGroup, recordTotal, templateForRecordList } from "../core/selector";
+
+export const recordObserver = () => {
+  const options = { 
+    attribute: true,childList : true,subtree : true,
+  }
+
+  const callback = () => {
+      calRecordTotal();
+  }
+  
+  const observer = new MutationObserver(callback);
+  observer.observe(recordGroup,options);
+}
 
 export const recordUI = (id, name, price, quantity) => {
   const record = templateForRecordList.content.cloneNode(true);
@@ -21,7 +34,7 @@ export const updateRecord = (id, quantity) => {
     console.log(price,rowQuantity);
    cost.innerText = price.innerText *rowQuantity.innerText;
   }
-   calRecordTotal();
+   
 };
 
 export const calRecordTotal = () => {
@@ -36,3 +49,5 @@ export const calRecordTotal = () => {
   recordTotal.innerText = total;
   return total;
 };
+
+

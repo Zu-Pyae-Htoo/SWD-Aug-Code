@@ -63,7 +63,6 @@ export const recordFormHandler = (event) => {
     );
   }
 
-  calRecordTotal();
   recordForm.reset();
 };
 
