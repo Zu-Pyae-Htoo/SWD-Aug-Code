@@ -10,4 +10,4 @@ export default area;
 
 export const circle = (r) => {
     return Math.PI*r**2;
-}
+} 
