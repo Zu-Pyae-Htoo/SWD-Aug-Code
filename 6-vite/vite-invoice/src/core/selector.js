@@ -14,3 +14,4 @@ export const newProductForm = document.querySelector("#newProductForm");
 export const newProductName = document.querySelector("#newProductName"); 
 export const newProductPrice = document.querySelector("#newProductPrice");
 export const newProductBtn = document.querySelector("#newProductBtn");
+export const templateForRecordList = document.querySelector("#templateForRecordList");

@@ -104,3 +104,7 @@ export const newProductFormHandler = (event) => {
       }
     }
   };
+
+  export const printBtnHandler = () => {
+    print();
+  };
