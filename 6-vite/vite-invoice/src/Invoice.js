@@ -1,16 +1,21 @@
 import { productRender } from "./app/products";
-import { products } from "./core/variables";
-
+import { newProductFormHandler, productDrawerHandler, recordFormHandler, recordGroupHandler } from "./core/handler";
+import { newProductForm, productManageBtn, recordForm, recordGroup } from "./core/selector";
+import {products} from "./core/variables"
 class Invoice {
-    initialRender () {
-        productRender(products)
+    listener(){
+        productManageBtn.addEventListener("click",productDrawerHandler);
+        closeDrawer.addEventListener("click",productDrawerHandler);
+        newProductForm.addEventListener("submit",newProductFormHandler);
+        recordForm.addEventListener("submit",recordFormHandler)
     }
-    listner(){
-
+    initialRender(){
+        productRender(products);
     }
     init() {
         console.log("Invoice App started");
         this.initialRender();
+        this.listener();
     }
 }
 
