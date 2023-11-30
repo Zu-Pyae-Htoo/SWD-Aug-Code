@@ -6,8 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    <main id="app" class="">
-      <header class="border-b-2 border-gray-800 p-2">
+    <main id="app" class="flex flex-col min-h-screen ">
+      <header class="border-b-2 border-gray-700 py-2 fixed w-full left-0 top-0 bg-white z-10">
         <div class="box">
           <div class="flex justify-between items-center">
             <div>
@@ -59,6 +59,7 @@
           </div>
         </div>
       </header>
+      <div class="h-16"></div>
 
       <section class="my-5">
         <div class="box">
@@ -88,24 +89,28 @@
         </div>
       </section>
 
+      <div class="h-10"></div>
+
       <section class="box">
-        <div id="productGroup" class="grid grid-cols-4">
+        <div id="productGroup" class="grid grid-cols-1 gap-6  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <div id="productCard" class="">
             <img
-              class="h-32"
+              class="h-32 -mb-16 ml-3"
               src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
               alt=""
             />
-            <div class="border border-neutral-500 p-5">
-              <h3 class="line-clamp-1 font-bold text-lg font-heading">
+            <div class="border border-neutral-500 p-5 rounded-lg">
+              <h3 class="line-clamp-1 font-bold text-lg font-heading mt-12">
                 Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
               </h3>
-              <p class="line-clamp-3 text-sm text-neutral-600">
+              <p class="line-clamp-3 text-sm text-neutral-600 mb-3">
                 Your perfect pack for everyday use and walks in the forest.
                 Stash your laptop (up to 15 inches) in the padded sleeve, your
                 everyday
               </p>
-              <div class="flex justify-between">
+              <div
+                class="flex justify-between border-b-2 border-neutral-400 pb-3 mb-3"
+              >
                 <div class="stars flex gap-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,18 +178,42 @@
                 </div>
                 <p class="rating">(<span>4.3</span> / <span>266</span>)</p>
               </div>
-              <p class="price">$<span>123</span></p>
+              <p class="price mb-3">
+                $<span class="font-bold font-heading">123</span>
+              </p>
 
               <button
                 type="button"
-                class="block w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                class="text-neutral-700 hover:text-white border border-gray-700 hover:bg-neutral-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 block w-full"
               >
-                Dark
+                Add to Cart
               </button>
             </div>
           </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
+
+      <footer class=" bg-neutral-700 py-3 mt-auto">
+        <div class=" box">
+            <div class="flex justify-between items-center text-white">
+              <p>Copyright @ 2023 <a href="https://www.mms-it.com" target="_blank">MMS-IT</a></p>
+        
+            
+                
+                <button type="button" class="text-white-700 border border-white-700 hover:bg-white hover:text-neutral-700 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
+                  </svg>
+                  <span class="sr-only">Scroll to top</span>
+                </button>
+            
+            </div>
+        </div>
+      </footer>
     </main>
     <script type="module" src="./main.js"></script>
   </body>

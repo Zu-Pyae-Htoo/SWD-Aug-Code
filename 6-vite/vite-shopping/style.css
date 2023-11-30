@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 .box{
-    @apply max-w-[1140px] mx-auto;
+    @apply max-w-[1140px] mx-auto px-5 lg:px-0;
 }
