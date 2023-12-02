@@ -72,28 +72,7 @@
       <section class="my-5">
         <div class="box">
           <h3 class="mb-3 font-heading font-semibold">Product Catagories</h3>
-          <div class="flex gap-2">
-            <button
-              type="button"
-              class="text-gray-900 hover:text-white border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-            >
-              All
-            </button>
-
-            <button
-              type="button"
-              class="text-gray-900 hover:text-white border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-            >
-              All
-            </button>
-
-            <button
-              type="button"
-              class="text-gray-900 hover:text-white border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-            >
-              All
-            </button>
-          </div>
+          <div class="flex gap-3" id="catagoryGroup"></div>
         </div>
       </section>
 
@@ -365,6 +344,15 @@
         </div>
       </div>
     </main>
+    <!-- Template  -->
+    <template id="catagoryTemplate">
+      <button
+        type="button"
+        class="catagory-btn text-gray-900 hover:text-white border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+      >
+        All
+      </button>
+    </template>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
