@@ -21,6 +21,7 @@ export const productUi = ({
 };
 
 export const productRender = (lists) => {
+  productGroup.innerHTML = "";
   lists.forEach((list) => productGroup.append(productUi(list)));
 };
 
