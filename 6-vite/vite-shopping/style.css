@@ -6,3 +6,11 @@
 .box {
   @apply max-w-[1140px] mx-auto px-5 lg:px-0;
 }
+
+.category-btn {
+  @apply select-none text-gray-900 hover:text-white border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center;
+}
+
+.category-btn.active {
+  @apply select-none text-white bg-neutral-700 hover:text-white border border-neutral-700 hover:bg-neutral-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center;
+}

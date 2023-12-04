@@ -1,5 +1,10 @@
 import { products } from "../core/data";
-import { fillStarTemplate, outlineStarTemplate, productGroup, productTemplate } from "../core/selectors";
+import {
+  fillStarTemplate,
+  outlineStarTemplate,
+  productGroup,
+  productTemplate,
+} from "../core/selectors";
 
 export const productUi = ({
   id,
@@ -26,20 +31,16 @@ export const productRender = (lists) => {
 };
 
 export const starRating = (rate) => {
-
-  
   const stars = document.createDocumentFragment();
-  for(let i=1;i<=5;i++){
+  for (let i = 1; i <= 5; i++) {
     const fillStar = fillStarTemplate.content.cloneNode(true);
     const outlineStar = outlineStarTemplate.content.cloneNode(true);
-    if(i<=rate.toFixed(0)){
-        stars.append(fillStar);
-    }else{
+    if (i <= rate.toFixed(0)) {
+      stars.append(fillStar);
+    } else {
       stars.append(outlineStar);
     }
-    
   }
 
   return stars;
-
-}
+};

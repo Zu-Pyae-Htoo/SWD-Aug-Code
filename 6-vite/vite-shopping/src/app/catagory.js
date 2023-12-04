@@ -18,6 +18,9 @@ export const categoryUi = (text) => {
 export const categoryHandler = (event) => {
   if (event.target.classList.contains("category-btn")) {
     const selectedCategory = event.target.innerText;
+    //?? nullish coalescing operator
+    categoryGroup.querySelector("button.active")?.classList?.remove("active");
+    event.target.classList.add("active");
     const filteredProduct = products.filter(
       (product) =>
         product.category === selectedCategory || "All" === selectedCategory
@@ -25,3 +28,5 @@ export const categoryHandler = (event) => {
     productRender(filteredProduct);
   }
 };
+
+

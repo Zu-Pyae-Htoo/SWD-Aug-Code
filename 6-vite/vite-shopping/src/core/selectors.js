@@ -5,3 +5,6 @@ export const productGroup = app.querySelector("#productGroup");
 export const productTemplate = app.querySelector("#productTemplate");
 export const fillStarTemplate = app.querySelector("#fillStarTemplate");
 export const outlineStarTemplate = app.querySelector("#outlineStarTemplate");
+export const searchBtn = document.querySelector("#searchBtn");
+export const searchInput = app.querySelector("#searchInput");
+
