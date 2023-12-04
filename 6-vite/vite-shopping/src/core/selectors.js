@@ -7,4 +7,8 @@ export const fillStarTemplate = app.querySelector("#fillStarTemplate");
 export const outlineStarTemplate = app.querySelector("#outlineStarTemplate");
 export const searchBtn = document.querySelector("#searchBtn");
 export const searchInput = app.querySelector("#searchInput");
+export const cartTemplate = app.querySelector("#cartTemplate");
+export const cartGroup = app.querySelector("#cartGroup");
+
+
 

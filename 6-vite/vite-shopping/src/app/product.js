@@ -15,6 +15,7 @@ export const productUi = ({
   rating: { rate, count },
 }) => {
   const product = productTemplate.content.cloneNode(true);
+  product.querySelector(".product-card").setAttribute("product-card-id",id);
   product.querySelector(".product-title").innerText = title;
   product.querySelector(".product-description").innerText = description;
   product.querySelector(".product-img").src = image;
