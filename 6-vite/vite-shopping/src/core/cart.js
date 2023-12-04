@@ -15,7 +15,10 @@ export const cartUi = ({ id, image, title, price }) => {
 
 export const productGroupHandler = (event) => {
   if (event.target.classList.contains("add-to-cart-btn")) {
-    const currentProductCart = event.target.closest(".product-card");
-    console.log(currentProductCart);
+    const currentProductCard = event.target.closest(".product-card");
+    const currentProductCardId = parseInt(currentProductCard.getAttribute("product-card-id"));
+    const card =products.find(el=> el.id === currentProductCardId)
+    cartGroup.append(cartUi(card))
+   
   }
 };
