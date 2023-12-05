@@ -1,6 +1,7 @@
 // import { Carousel } from "flowbite";
 import "./style.css";
-import "./node_modules/flowbite/dist/flowbite"
+// import "./node_modules/flowbite/dist/flowbite"
+import { Drawer, Modal } from "flowbite";
 // import './node_modules/flowbite/dist/flowbite'
 
 // const slideUi = document.querySelector("#my-slide");
@@ -63,3 +64,22 @@ import "./node_modules/flowbite/dist/flowbite"
 //   slider.prev();
 //   uSlider.next();
 // });
+
+// const modalBtn = document.querySelector("#modal-btn")
+// const modalUi = document.querySelector("#default-modal");
+// const options = {
+//     backdrop: 'static',
+// }
+// const modal = new Modal(modalUi,options);
+// modalBtn.addEventListener("click",() => {
+//     modal.show();
+// })
+
+
+// const drawerBtn = document.querySelector("#drawer-btn");
+// const myDrawer = document.querySelector("#my-drawer");
+
+// const drawer = new Drawer(myDrawer);
+// drawerBtn.addEventListener("click",() => {
+//     drawer.show();
+// })
