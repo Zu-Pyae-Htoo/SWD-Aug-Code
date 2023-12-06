@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .title {
+        background-color: gray;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        transition: 0.5;
+      }
+
+      .title:hover {
+        background-color: black;
+        color: red;
+      }
+      .title:active {
+        background-color: green;
+        color: blue;
+      }
+      a:visited {
+        color: brown;
+      }
+      input {
+        padding: 10px;
+        border: 2px solid black;
+      }
+      input:focus {
+        background-color: lightgray;
+      }
+
+      input:focus-visible {
+        outline: none;
+      }
+
+      input[type="radio"]:checked {
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">OK</div>
+
+    <a href="https://cloud.google.com">Google cloud</a>
+    <a href="https://google.com">To google</a>
+
+    <div><input type="text" /><input type="text" /><input type="text" /></div>
+    <br /><br /><br />
+
+    <input type="radio" class="gender" />
+    <input type="radio" class="gender" />
+    <input type="radio" class="gender" />
+  </body>
+</html>

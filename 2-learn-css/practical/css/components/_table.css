@@ -1,0 +1,47 @@
+.table {
+  border: 2px solid rgb(93, 93, 93);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table thead th,
+.table tbody td {
+  border: 2px solid gray;
+  padding: 10px 10px;
+}
+.table thead th {
+  border-color: black;
+}
+
+.table-primary thead th,
+.table-primary tbody td {
+  border-color: var(--primary);
+}
+
+.hover-table thead th {
+  border-color: #1c8207;
+}
+
+.hover-table tbody td {
+  border: none;
+}
+
+.hover-table tbody td {
+  border-bottom: 1px solid rgb(99, 98, 98);
+}
+.hover-table tbody tr:hover {
+  background-color: #acff064b;
+}
+
+.strip-table tbody td {
+  border: none;
+}
+.strip-table {
+  border: none;
+}
+.strip-table thead th {
+  border-color: #0077b6;
+}
+.strip-table tbody tr:nth-child(even) {
+  background-color: #0076b62c;
+}

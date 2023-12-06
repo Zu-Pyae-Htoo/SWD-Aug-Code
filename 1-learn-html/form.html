@@ -1,0 +1,64 @@
+<h1>Learn HTML form</h1>
+
+<form action="https://mms-it.com" method="get">
+  <fieldset>
+    <legend>User register</legend>
+
+    <label for="name">Your Name</label>
+    <input type="text" name="your_name" id="name" />
+    <br />
+    <br />
+
+    <label for="db">Date of Birth</label>
+    <input type="date" name="date_of_birth" id="db" />
+
+    <br />
+    <br />
+    <label for="expected_salary">ExpectedSalary</label>
+    <input type="number" name="expected_salary" id="expected_salary" />
+    <br /><br />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" />
+    <br /><br />
+    <hr />
+
+    <label for="">Gender</label>
+    <input type="radio" id="male" name="gender" value="male" />
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="female">Female</label>
+
+    <hr />
+    <div>
+      <label for="nationality">Select Nationality</label>
+      <br />
+      <div>
+        <select name="nationality" id="nationality">
+          <option value="mm">Myanmar</option>
+          <option value="th">Thailand</option>
+          <option value="kr">Korea</option>
+          <option value="jp" selected>Japan</option>
+        </select>
+      </div>
+    </div>
+
+    <hr />
+    <div>
+      <label for="">Select your skill</label>
+    </div>
+    <div>
+      <input type="checkbox" name="html" />
+    </div>
+    <hr />
+
+    <div>
+      <label for="">CV & attachment</label>
+      <input type="file" name="cv[]" id="cv" multiple />
+    </div>
+
+    <br /><br />
+    <button type="submit">register</button>
+  </fieldset>
+</form>

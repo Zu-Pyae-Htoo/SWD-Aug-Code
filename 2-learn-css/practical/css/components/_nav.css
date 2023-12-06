@@ -1,0 +1,67 @@
+.nav {
+  /* border: 2px solid black; */
+}
+
+.nav1 .nav-link {
+  border: 2px solid var(--primary);
+  display: inline-block;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary);
+  padding: 10px 0;
+}
+.nav .nav-link.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.nav2 .nav-link {
+  /* border: 2px solid var(--primary); */
+  display: inline-block;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary);
+  padding: 10px 0;
+}
+.nav2 .nav-link.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.nav3 .nav-link {
+  border: 2px solid var(--primary);
+  display: inline-block;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary);
+  padding: 10px 0;
+}
+.nav3 .nav-link.active {
+  /* background-color: var(--primary); */
+
+  color: var(--primary);
+}
+
+.nav4 {
+  display: flex;
+}
+
+.nav4 .nav-link {
+  display: inline-block;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid transparent;
+  border-bottom: var(--primary);
+  color: var(--primary);
+}
+
+.nav4 .nav-link.active {
+  border: 2px solid var(--primary);
+  border-bottom-color: var(--primary);
+  /* color: var(--primary); */
+}

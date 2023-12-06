@@ -1,0 +1,16 @@
+.form-check-label {
+  text-transform: uppercase;
+}
+
+.form-check {
+  /* accent-color: orange; */
+
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  appearance: none;
+}
+
+.form-check:checked {
+  background-color: black;
+}

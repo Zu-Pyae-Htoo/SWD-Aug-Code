@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+}
+.obj {
+  /* padding: 50px; */
+  /* background: black; */
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.obj:nth-child(3) {
+  background-color: skyblue;
+}
+
+.obj:nth-child(4) {
+  background-color: pink;
+  /* position: relative;
+  top: 50px;
+  left: 30px; */
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+
+  /* right: 0;
+  margin: auto; */
+
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  position: sticky;
+  top: 10px;
+}
+
+.obj:nth-child(5) {
+  background-color: violet;
+}

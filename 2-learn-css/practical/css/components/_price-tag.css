@@ -1,0 +1,9 @@
+.price-tag {
+  background-color: #377bff;
+  height: 40px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.price-tag::after {
+}

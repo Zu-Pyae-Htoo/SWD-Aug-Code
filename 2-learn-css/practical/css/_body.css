@@ -1,0 +1,19 @@
+main {
+  padding: 10px;
+}
+.main-heading {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.login {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 450px;
+  margin: 100px auto;
+}
+
+.login-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}

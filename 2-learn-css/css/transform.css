@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 50px;
+}
+
+.box {
+  border: 3px solid black;
+  width: 500px;
+  height: 400px;
+  /* perspective: 300px; */
+}
+
+.box img {
+  width: 200px;
+  /* transform: translateX(-30) translateY(-50px); */
+  /* transform: rotateZ(10deg); */
+  /* transform: scale(0.6); */
+  /* transform: skew(20deg, 10deg); */
+  /* transform: rotateY(10deg) rotateX(10deg); */
+}

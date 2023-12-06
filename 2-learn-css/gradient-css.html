@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      .box {
+        height: 300px;
+        background-image: linear-gradient(45deg, rgb(4, 255, 0), orange);
+        background-image: linear-gradient();
+      }
+      .box2 {
+        height: 300px;
+        width: 200px;
+        display: inline-block;
+        background-image: radial-gradient(red, green, orange);
+      }
+      .box3 {
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        /* background-image: conic-gradient(red, green, orange); */
+        background-image: conic-gradient(pink 0deg, pink 0deg, grey 0deg);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner {
+        background-color: #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

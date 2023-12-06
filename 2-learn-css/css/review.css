@@ -1,0 +1,27 @@
+/* ===========Max/Min Width====== */
+/* .box {
+  background-color: gray;
+  max-width: 800px;
+  min-width: 500px;
+} */
+
+/* ========counter css========== */
+body {
+  counter-reset: forh3;
+}
+
+h3 {
+  counter-increment: forh3;
+}
+
+h3::before {
+  content: counter(forh3) ".";
+}
+
+.poe-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid black;
+}

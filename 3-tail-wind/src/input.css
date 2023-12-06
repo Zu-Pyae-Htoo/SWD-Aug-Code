@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;600&family=Roboto:wght@100;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .check-box{
+    appearance: none;
+
+    border: 2px solid blue;
+    width: 15px;
+    height: 15px;
+
+    &:checked{
+        background-color: orange;
+    }
+} */
+
+.check-box{
+    @apply appearance-none;
+    @apply border-[2px] border-solid border-blue-500;
+
+    @apply w-[15px] h-[15px];
+
+    &:checked {
+        @apply bg-blue-500;
+    }
+
+}
+
+.switch{
+    @apply appearance-none;
+    @apply border-2 border-green-600 border-solid w-[150px] h-[60px] rounded-full relative p-3;
+
+    &::before{
+        content: "";
+     @apply absolute bg-green-600 w-[50px] h-[50px] top-[3px] left-[6px] rounded-full;
+    }
+
+    &:checked{
+        /* @apply translate-x-[80px]; */
+       @apply bg-green-200 ;
+
+       &::before{
+        @apply translate-x-[80px];
+       }
+    }
+
+  
+   
+}
