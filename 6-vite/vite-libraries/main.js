@@ -1,5 +1,6 @@
-import Typed from 'typed.js'
-import './style.css'
+import Typed from 'typed.js';
+import './style.css';
+import AOS from 'aos';
 
 const typeUi = document.querySelector("#typeUi")
 const options = {
@@ -11,3 +12,5 @@ const options = {
     contentType: 'html',
 }
 const type = new Typed(typeUi,options)
+
+AOS.init();
