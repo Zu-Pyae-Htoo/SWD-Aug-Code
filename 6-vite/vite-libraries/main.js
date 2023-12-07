@@ -1,6 +1,7 @@
 import Typed from "typed.js";
 import "./style.css";
 import AOS from "aos";
+import WOW from "wow.js";
 
 const typeUi = document.querySelector("#typeUi");
 const options = {
@@ -19,4 +20,6 @@ const type = new Typed(typeUi, options);
 
 AOS.init();
 
-const wow = new WOW({ boxClass: "wow", animateClass: "animated" });
+const wow = new WOW({ boxClass: "wow", animateClass: "animate__animated" });
+
+wow.init();
