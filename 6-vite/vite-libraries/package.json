@@ -17,6 +17,7 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "flowbite": "^2.2.0",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "wow.js": "^1.2.2"
   }
 }
