@@ -1,3 +1,11 @@
+@import url('./node_modules/animate.css/animate.min.css');
+@import url('./node_modules/aos/dist/aos.css');
+@import url('./node_modules/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('./node_modules/@glidejs/glide/dist/css/glide.theme.min.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glide__slide.glide__slide--active img{
+    @apply scale-125 duration-200
+}

@@ -2,6 +2,7 @@ import Typed from "typed.js";
 import "./style.css";
 import AOS from "aos";
 import WOW from "wow.js";
+import Glide from '@glidejs/glide'
 
 const typeUi = document.querySelector("#typeUi");
 const options = {
@@ -20,6 +21,20 @@ const type = new Typed(typeUi, options);
 
 AOS.init();
 
-const wow = new WOW({ boxClass: "wow", animateClass: "animate__animated" });
+const wow = new WOW({
+  boxClass: "wow",
+  animateClass: "animate__animated",
+  mobile: true,
+});
 
 wow.init();
+
+
+
+new Glide('.glide', {
+  type: 'carousel',
+  focusAt : 'center' ,
+  startAt: 2,
+  perView: 3,
+  gap : 20,
+}).mount()
