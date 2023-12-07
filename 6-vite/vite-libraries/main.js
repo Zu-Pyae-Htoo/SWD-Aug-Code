@@ -35,6 +35,7 @@ new Glide('.glide', {
   type: 'carousel',
   focusAt : 'center' ,
   startAt: 2,
-  perView: 3,
-  gap : 20,
+  perView: 2,
+  gap : 30,
+  animationTimingFunc : 'ease-in-out',
 }).mount()

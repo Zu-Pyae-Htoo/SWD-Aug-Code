@@ -6,6 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.glide__slide.glide__slide--active img{
-    @apply scale-125 duration-200
-}
+/* .glide__slide.glide__slide--active img{
+    @apply scale-75 duration-100
+} */
