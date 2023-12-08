@@ -18,9 +18,11 @@
     "@glidejs/glide": "^3.6.0",
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
+    "chart.js": "^4.4.1",
     "flowbite": "^2.2.0",
     "list": "^2.0.19",
     "typed.js": "^2.1.0",
+    "waypoints": "^4.0.1",
     "wow.js": "^1.2.2"
   }
 }
