@@ -18,14 +18,12 @@ const App = () => {
       null,
       React.createElement("li", null, "SWD"),
       React.createElement("li", null, "WAD"),
+      React.createElement("li", null, "BWD"),
       React.createElement("li", null, "BUD"),
       React.createElement("li", null, "PUD"),
     )
   );
 };
-
-
-
 
 
 root.render(App());
