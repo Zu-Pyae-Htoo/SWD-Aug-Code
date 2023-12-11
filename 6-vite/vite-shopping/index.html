@@ -75,7 +75,7 @@
                   </svg>
                   <span
                     class="cart-item-count bg-red-700 text-white w-5 h-5 text-sm rounded-full border border-white absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
-                    ></span
+                    >0</span
                   >
                 </button>
               </div>
@@ -260,7 +260,7 @@
             </div> -->
           </div>
           <div class="cart-drawer-footer border-t-2 border-gray-700 p-3">
-            <p class="text-neutral-600 text-end font-bold" >Total</p>
+            <p class="text-neutral-600 text-end font-bold">Total</p>
             <h1 class="font-heading font-bold text-xl text-end">
               $<span id="costTotal"></span>
             </h1>
@@ -286,6 +286,7 @@
             src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
             alt=""
           />
+
           <div class="border border-neutral-500 p-5 rounded-lg">
             <h3
               class="line-clamp-1 font-bold text-lg font-heading mt-12 product-title"
@@ -358,11 +359,29 @@
       <template id="cartTemplate">
         <div class="product-in-cart p-3">
           <img
-            class="cart-img h-20 -mb-10 ml-3"
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            alt=""
-          />
-          <div class="border border-neutral-400 rounded-lg p-3">
+          class="cart-img h-20 -mb-10  ml-3 relative z-30"
+          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          alt=""
+        />
+          
+          <div class="border border-neutral-400 rounded-lg p-3 relative group">
+
+            <button class="bg-red-100 text-red-700 rounded-lg p-1 absolute right-2 top-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto duration-200 translate-x-full group-hover:translate-x-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 pointer-events-none"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                />
+              </svg>
+            </button>
             <p
               class="cart-title line-clamp-1 font-heading font-bold mt-10 mb-2"
             >

@@ -1,7 +1,6 @@
 import { products } from "./data";
 import { cartGroup, cartTemplate, costTotal } from "./selectors";
 
-
 export const cartUi = ({ id, image, title, price }) => {
   const cart = cartTemplate.content.cloneNode(true);
 
@@ -22,19 +21,31 @@ export const productGroupHandler = (event) => {
     );
     const card = products.find((el) => el.id === currentProductCardId);
     cartGroup.append(cartUi(card));
+  }
+};
 
-    // cart
+export const cartGroupObserver = () => {
+  const process = () => {
 
+    //cart count
     const cartCount = cartGroup.querySelectorAll(".product-in-cart").length;
     app
       .querySelectorAll(".cart-item-count")
       .forEach((el) => (el.innerText = cartCount));
 
+    //cart 
     const cartCostTotal = [...cartGroup.querySelectorAll(".cart-cost")].reduce(
       (pv, cv) => pv + parseFloat(cv.innerText),
       0
     );
 
-   costTotal.innerText = cartCostTotal;
-  }
+    costTotal.innerText = cartCostTotal.toFixed(2);
+  };
+  const options = {
+    childList: true,
+    subtree: true,
+  };
+
+  const observer = new MutationObserver(process);
+  observer.observe(cartGroup, options);
 };
