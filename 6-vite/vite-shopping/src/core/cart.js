@@ -1,5 +1,6 @@
 import { products } from "./data";
-import { cartGroup, cartTemplate } from "./selectors";
+import { cartGroup, cartTemplate, costTotal } from "./selectors";
+
 
 export const cartUi = ({ id, image, title, price }) => {
   const cart = cartTemplate.content.cloneNode(true);
@@ -16,9 +17,24 @@ export const cartUi = ({ id, image, title, price }) => {
 export const productGroupHandler = (event) => {
   if (event.target.classList.contains("add-to-cart-btn")) {
     const currentProductCard = event.target.closest(".product-card");
-    const currentProductCardId = parseInt(currentProductCard.getAttribute("product-card-id"));
-    const card =products.find(el=> el.id === currentProductCardId)
-    cartGroup.append(cartUi(card))
-   
+    const currentProductCardId = parseInt(
+      currentProductCard.getAttribute("product-card-id")
+    );
+    const card = products.find((el) => el.id === currentProductCardId);
+    cartGroup.append(cartUi(card));
+
+    // cart
+
+    const cartCount = cartGroup.querySelectorAll(".product-in-cart").length;
+    app
+      .querySelectorAll(".cart-item-count")
+      .forEach((el) => (el.innerText = cartCount));
+
+    const cartCostTotal = [...cartGroup.querySelectorAll(".cart-cost")].reduce(
+      (pv, cv) => pv + parseFloat(cv.innerText),
+      0
+    );
+
+   costTotal.innerText = cartCostTotal;
   }
 };
