@@ -1,9 +1,10 @@
 import { products } from "./data";
 import { cartGroup, cartTemplate, costTotal } from "./selectors";
+import { comfirmBox } from "./functions";
 
 export const cartUi = ({ id, image, title, price }) => {
   const cart = cartTemplate.content.cloneNode(true);
-
+  cart.querySelector(".product-in-cart").setAttribute("product-in-cart-id", id);
   cart.querySelector(".cart-img").src = image;
   cart.querySelector(".cart-title").innerText = title;
   cart.querySelector(".cart-price").innerText = price;
@@ -26,14 +27,13 @@ export const productGroupHandler = (event) => {
 
 export const cartGroupObserver = () => {
   const process = () => {
-
     //cart count
     const cartCount = cartGroup.querySelectorAll(".product-in-cart").length;
     app
       .querySelectorAll(".cart-item-count")
       .forEach((el) => (el.innerText = cartCount));
 
-    //cart 
+    //cart
     const cartCostTotal = [...cartGroup.querySelectorAll(".cart-cost")].reduce(
       (pv, cv) => pv + parseFloat(cv.innerText),
       0
@@ -48,4 +48,20 @@ export const cartGroupObserver = () => {
 
   const observer = new MutationObserver(process);
   observer.observe(cartGroup, options);
+};
+
+export const removeCart = (id) => {
+  const currentCart = cartGroup.querySelector(`[product-in-cart-id='${id}']`);
+  comfirmBox(() => {
+    currentCart.remove();
+  });
+};
+
+export const cartGroupHandler = (event) => {
+  if (event.target.classList.contains("del-btn")) {
+    const cartID = event.target
+      .closest(".product-in-cart")
+      .getAttribute("product-in-cart-id");
+    removeCart(cartID);
+  }
 };
