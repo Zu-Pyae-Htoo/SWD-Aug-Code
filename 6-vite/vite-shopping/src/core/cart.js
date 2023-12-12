@@ -50,7 +50,7 @@ export const cartGroupObserver = () => {
   observer.observe(cartGroup, options);
 };
 
-export const removeCart = (id) => {
+export const cartRemove = (id) => {
   const currentCart = cartGroup.querySelector(`[product-in-cart-id='${id}']`);
   comfirmBox(() => {
     currentCart.remove();
@@ -62,6 +62,6 @@ export const cartGroupHandler = (event) => {
     const cartID = event.target
       .closest(".product-in-cart")
       .getAttribute("product-in-cart-id");
-    removeCart(cartID);
+    cartRemove(cartID);
   }
 };
