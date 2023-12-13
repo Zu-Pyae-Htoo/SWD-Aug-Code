@@ -100,4 +100,7 @@ const clock = document.querySelector("#clock");
 //   console.log("run");
 // })
 
-console.log(location);
+// console.log(location);
+
+// console.log(history);
+// console.log(navigator);
