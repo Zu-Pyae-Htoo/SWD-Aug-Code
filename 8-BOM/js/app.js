@@ -55,9 +55,49 @@ addEventListener("online", () => {
 const clock = document.querySelector("#clock");
 // clock.innerText = new Date()
 
-const run2 = () => {
-  const date = new Date();
-  clock.innerText = date.toLocaleTimeString();
-};
+// const run2 = () => {
+//   const date = new Date();
+//   clock.innerText = date.toLocaleTimeString();
+// };
 
-// setInterval(run2,1000)
+// // const interval = setInterval(run2,1000)
+// document.querySelector("#btn").addEventListener("click", () => {
+//   clearInterval(interval);
+//   console.log("clear interval");
+// });
+
+// let openWindow;
+// document.querySelector("#googleBtn").addEventListener("click", () => {
+//   const features = "width=300,height=300,right=100,top=100";
+//   openWindow = window.open("https://www.google.com", "google", features,"resizable");
+// });
+
+// document.querySelector("#close").addEventListener("click", () => {
+//     openWindow.close();
+// });
+
+
+// document.querySelector("#resizeBtn").addEventListener("click",() => {
+//   openWindow.resizeBy(-100,-100)
+// })
+
+// document.querySelector("#scrollBtn").addEventListener("click",() => {
+//     window.scrollTo(0,heading.getBoundingClientRect().top)
+// })
+
+// const heading = document.querySelector("#heading");
+// console.log(heading.getBoundingClientRect());
+
+
+// addEventListener("scroll",() => {
+//   console.log(scrollY);
+// })
+
+// console.log(screen);
+// console.log(screen.orientation);
+
+// screen.orientation.addEventListener("change",() => {
+//   console.log("run");
+// })
+
+console.log(location);
