@@ -35,18 +35,16 @@ const App = () => {
         {heading}
       </h1>
       <ul>
-        {courses
-          .filter((el) => el.studentCount > 0)
-          .map((course) => (
-            <li
-              className={`${
-                course.studentCount === 0 ? "bg-red-200" : "bg-gray-200"
-              } mb-3 p-2 border-s-4 border-neutral-400`}
-              key={course.id}
-            >
-              {`${course.title} ${course.studentCount}`}
-            </li>
-          ))}
+        {courses.filter(el=> el.studentCount>0).map((course) => (
+          <li
+            className={`${
+              course.studentCount === 0 ? "bg-red-200" : "bg-gray-200"
+            } mb-3 p-2 border-s-4 border-neutral-400`}
+            key={course.id}
+          >
+            {`${course.title} ${course.studentCount}`}
+          </li>
+        ))}
       </ul>
     </div>
   );
