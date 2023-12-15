@@ -65,3 +65,18 @@ export const cartGroupHandler = (event) => {
     cartRemove(cartID);
   }
 };
+
+export const cartQuantityUpdate = (id, quantity) => {
+  const currentCart = cartGroup.querySelector(`[product-in-cart-id='${id}']`);
+
+  const currentCartQuantity = currentCart.querySelector(".record-quantity");
+  const currentCartprice = currentCart.querySelector(".record-price");
+  const currentCartcost = currentCart.querySelector(".record-cost");
+  if (quantity > 0 || currentCartQuantity.innerText > 1) {
+    currentCartQuantity.innerText =
+      parseInt(currentCartQuantity.innerText) + quantity;
+
+    currentCartcost.innerText =
+      currentCartprice.innerText * currentCartQuantity.innerText;
+  }
+};
