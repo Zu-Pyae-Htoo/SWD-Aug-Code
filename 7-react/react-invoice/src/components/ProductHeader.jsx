@@ -7,7 +7,7 @@ const ProductHeader = () => {
         <h1 className="text-3xl font-bold text-gray-700">Your Product</h1>
         <h4 className="text-xl text-gray-500">Manage Product</h4>
       </div>
-      <button id="closeDrawer" className="p-3 bg-blue-100 text-blue-600">
+      <button id="closeDrawer" className="p-3 bg-blue-100 text-blue-600" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
