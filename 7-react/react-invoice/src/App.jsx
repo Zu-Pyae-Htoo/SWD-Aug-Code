@@ -3,17 +3,16 @@ import Header from "./components/Header";
 import CheckoutForm from "./components/CheckoutForm";
 import RecordTable from "./components/RecordTable";
 import Footer from "./components/Footer";
-
 import ProductDrawer from "./components/ProductDrawer";
 
 const App = () => {
   return (
-    <div className="max-w-[700px] mx-auto min-h-screen flex flex-col">
+    <div className="max-w-[700px] mx-auto min-h-screen flex flex-col px-5 lg:px-0">
       <Header />
       <CheckoutForm />
       <RecordTable />
       <Footer />
-      <ProductDrawer />
+      <ProductDrawer/>
     </div>
   );
 };
