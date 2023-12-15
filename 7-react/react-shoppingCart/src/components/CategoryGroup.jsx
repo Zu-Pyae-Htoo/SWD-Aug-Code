@@ -8,14 +8,15 @@ const categories = [
 ];
 
 const CategoryGroup = () => {
+  const id = Date.now();
   return (
     <div className="flex gap-3" id="categoryGroup">
       <button type="button" className="category-btn active ">
         All
       </button>
-      {/* {categories.map((el, key) => {
-        return <CategoryBtn text={el} key={key} />;
-      })} */}
+      {categories.map((category) => {
+        return <CategoryBtn key={category} text={category} />;
+      })}
     </div>
   );
 };
