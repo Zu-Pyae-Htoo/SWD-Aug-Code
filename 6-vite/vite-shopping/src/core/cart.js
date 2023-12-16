@@ -63,15 +63,25 @@ export const cartGroupHandler = (event) => {
       .closest(".product-in-cart")
       .getAttribute("product-in-cart-id");
     cartRemove(cartID);
+  } else if (event.target.classList.contains("cart-increase")) {
+    const cartID = event.target
+      .closest(".product-in-cart")
+      .getAttribute("product-in-cart-id");
+    cartQuantityUpdate(cartID, 1);
+  } else if (event.target.classList.contains("cart-decrease")) {
+    const cartID = event.target
+      .closest(".product-in-cart")
+      .getAttribute("product-in-cart-id");
+    cartQuantityUpdate(cartID, -1);
   }
 };
 
 export const cartQuantityUpdate = (id, quantity) => {
   const currentCart = cartGroup.querySelector(`[product-in-cart-id='${id}']`);
 
-  const currentCartQuantity = currentCart.querySelector(".record-quantity");
-  const currentCartprice = currentCart.querySelector(".record-price");
-  const currentCartcost = currentCart.querySelector(".record-cost");
+  const currentCartQuantity = currentCart.querySelector(".cart-quantity");
+  const currentCartprice = currentCart.querySelector(".cart-price");
+  const currentCartcost = currentCart.querySelector(".cart-cost");
   if (quantity > 0 || currentCartQuantity.innerText > 1) {
     currentCartQuantity.innerText =
       parseInt(currentCartQuantity.innerText) + quantity;
