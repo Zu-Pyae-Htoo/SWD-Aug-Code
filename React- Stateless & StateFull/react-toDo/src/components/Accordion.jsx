@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Accordion = ({ id, question, answer, isOpen }) => {
+const Accordion = ({ id, openAccordion, question, answer, isOpen }) => {
   // const [open, setOpen] = useState(false);
   // const openHandler = () => {
   //   setOpen(!open);
@@ -8,7 +8,9 @@ const Accordion = ({ id, question, answer, isOpen }) => {
   return (
     <div className="">
       <div
-        // onClick={openHandler}
+        onClick={() => {
+          openAccordion(id);
+        }}
         className="bg-gray-200 border-y border-gray-400 select-none p-3 cursor-pointer flex justify-between"
       >
         <h1 className="">{question}</h1>

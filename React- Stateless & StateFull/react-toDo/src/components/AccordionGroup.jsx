@@ -28,6 +28,23 @@ const AccordionGroup = () => {
   ];
 
   const [faq, setFaq] = useState(faqArray);
+
+  const openAccordion = (id) => {
+    // setFaq(
+    //   faq.map((el) => {
+    //     if (el.id === id) {
+    //       return { ...el, isOpen: true };
+    //     }
+    //     return { ...el, isOpen: false };
+    //   })
+    // );
+
+    setFaq(
+      faq.map((el) =>
+        el.id === id ? { ...el, isOpen: true } : { ...el, isOpen: false }
+      )
+    );
+  };
   return (
     <div>
       <h1 className="mb-5 text-3xl">Faq Group</h1>
@@ -35,6 +52,7 @@ const AccordionGroup = () => {
         <Accordion
           key={id}
           id={id}
+          openAccordion={openAccordion}
           isOpen={isOpen}
           question={question}
           answer={answer}
