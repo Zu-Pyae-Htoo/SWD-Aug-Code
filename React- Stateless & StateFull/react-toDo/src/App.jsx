@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "./components/Heading";
 import CreateForm from "./components/CreateForm";
 import Status from "./components/Status";
@@ -10,16 +10,35 @@ import Accordion from "./components/Accordion";
 import AccordionGroup from "./components/AccordionGroup";
 
 const App = () => {
+  const taskList = [
+    { id: 1, job: "Complete project", isDone: false },
+    { id: 2, job: "Prepare presentation", isDone: true },
+    { id: 3, job: "Attend meeting", isDone: false },
+  ];
+  const [task, setTask] = useState(taskList);
+  const addTask = (newTasks) => {
+    setTask([...task, newTasks]);
+  };
+
+  const deleteTask = (id) => {
+    setTask(task.filter((el) => el.id != id));
+  };
+
+  const doneTask = (id) => {
+    setTask(
+      task.map((el) => (el.id == id ? { ...el, isDone: !el.isDone } : el))
+    );
+  };
   return (
     <div className="w-[400px] mx-auto mt-20">
-      {/* <Heading/>
-      <CreateForm/>
-      <Status/>
-      <ListGroup/> */}
+      <Heading />
+      <CreateForm addTask={addTask} />
+      <Status task={task} />
+      <ListGroup doneTask={doneTask} deleteTask={deleteTask} task={task} />
       {/* <Counter /> */}
       {/* <InputText /> */}
       {/* <Checker /> */}
-      <AccordionGroup />
+      {/* <AccordionGroup /> */}
     </div>
   );
 };
