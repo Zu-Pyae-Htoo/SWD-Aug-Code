@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const Accordion = ({ id, question, answer }) => {
-  const [open, setOpen] = useState(false);
-  const openHandler = () => {
-    setOpen(!open);
-  };
+const Accordion = ({ id, question, answer, isOpen }) => {
+  // const [open, setOpen] = useState(false);
+  // const openHandler = () => {
+  //   setOpen(!open);
+  // };
   return (
     <div className="">
       <div
-        onClick={openHandler}
-        className="bg-gray-400 border-y border-gray-400 select-none p-3 cursor-pointer flex justify-between"
+        // onClick={openHandler}
+        className="bg-gray-200 border-y border-gray-400 select-none p-3 cursor-pointer flex justify-between"
       >
         <h1 className="">{question}</h1>
         <svg
@@ -27,7 +27,7 @@ const Accordion = ({ id, question, answer }) => {
           />
         </svg>
       </div>
-      {open && (
+      {isOpen && (
         <div className="p-5 animate__animated animate__fadeIn duration-100">
           <p>{answer}</p>
         </div>
