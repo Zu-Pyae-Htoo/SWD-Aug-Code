@@ -12,7 +12,7 @@ import AccordionGroup from "./components/AccordionGroup";
 const App = () => {
   const taskList = [
     { id: 1, job: "Complete project", isDone: false },
-    { id: 2, job: "Prepare presentation", isDone: true },
+    { id: 2, job: "Prepare presentation", isDone: false },
     { id: 3, job: "Attend meeting", isDone: false },
   ];
   const [task, setTask] = useState(taskList);
@@ -29,12 +29,27 @@ const App = () => {
       task.map((el) => (el.id == id ? { ...el, isDone: !el.isDone } : el))
     );
   };
+
+  const updateTaskJob = (id, newJob) => {
+    setTask(task.map((el) => (el.id == id ? { ...el, job: newJob } : el)));
+  };
+
+  const taskAllDone = () => {
+    setTask(task.map(el => ({...el,isDone : true})))
+  }
+
   return (
     <div className="w-[400px] mx-auto mt-20">
       <Heading />
       <CreateForm addTask={addTask} />
       <Status task={task} />
-      <ListGroup doneTask={doneTask} deleteTask={deleteTask} task={task} />
+      <ListGroup
+        updateTaskJob={updateTaskJob}
+        doneTask={doneTask}
+        deleteTask={deleteTask}
+        task={task}
+        taskAllDone={taskAllDone}
+      />
       {/* <Counter /> */}
       {/* <InputText /> */}
       {/* <Checker /> */}

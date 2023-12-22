@@ -16,6 +16,13 @@ const CreateForm = ({ addTask }) => {
     addTask(newTask);
     setInput("");
   };
+
+  const handlerKeyUp = (event) => {
+    if (event.key === "Enter") {
+      handleAddBtn();
+    }
+  };
+
   return (
     <div className="flex mb-5">
       <input
@@ -24,6 +31,7 @@ const CreateForm = ({ addTask }) => {
         id="textInput"
         value={input}
         onChange={inputHandler}
+        onKeyUp={handlerKeyUp}
       />
       <button
         id="addBtn"
