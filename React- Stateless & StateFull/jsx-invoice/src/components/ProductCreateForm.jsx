@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const ProductCreateForm = () => {
+
+  const nameRef = useRef("");
+  const priceRef = useRef("");
+
+  const handlerAddBtn =() => {
+    console.log(nameRef.current);
+    console.log(priceRef.current);
+  }
   return (
     <div className="border-t-2 p-3">
       <div id="newProductForm">
@@ -13,6 +21,7 @@ const ProductCreateForm = () => {
               New Product Name
             </label>
             <input
+              ref={nameRef}
               type="text"
               id="newProductName"
               name="new_product_name"
@@ -28,6 +37,7 @@ const ProductCreateForm = () => {
               Product Price
             </label>
             <input
+              ref={priceRef}
               type="number"
               id="newProductPrice"
               name="new_product_price"
@@ -37,6 +47,7 @@ const ProductCreateForm = () => {
           </div>
           <div className="col-span-1">
             <button
+              onClick={handlerAddBtn}
               type="submit"
               className="w-full h-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
