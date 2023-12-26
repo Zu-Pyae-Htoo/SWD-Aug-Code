@@ -1,22 +1,34 @@
 import React, { useRef } from "react";
 
-const ProductCreateForm = () => {
-
+const ProductCreateForm = ({ addProduct }) => {
   const nameRef = useRef("");
   const priceRef = useRef("");
+  // const labelRef = useRef("");
 
-  const handlerAddBtn =() => {
-    console.log(nameRef.current);
-    console.log(priceRef.current);
-  }
+  const handlerAddBtn = () => {
+    // console.log(labelRef.current.getBoundingClientRect());
+    // console.log(nameRef.current.value);
+    // console.log(priceRef.current.valueAsNumber);
+
+    const newProduct = {
+      id: Date.now(),
+      name: nameRef.current.value,
+      price: priceRef.current.valueAsNumber,
+    };
+
+    addProduct(newProduct);
+    nameRef.current.value = "";
+    priceRef.current.value = "";
+  };
   return (
     <div className="border-t-2 p-3">
       <div id="newProductForm">
         <div className="grid grid-cols-3 gap-3">
           <div className="col-span-3">
             <label
+              // ref={labelRef}
               htmlFor="newProductName"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-lg font-medium text-gray-900"
             >
               New Product Name
             </label>

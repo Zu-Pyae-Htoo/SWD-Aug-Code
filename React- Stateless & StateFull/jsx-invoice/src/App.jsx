@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Drawer from "./components/Drawer";
 
 const App = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openDrawer, setOpenDrawer] = useState(true);
 
   const fruitArr = [
     { id: 1, name: "Apple", price: 1.0 },
@@ -23,13 +23,17 @@ const App = () => {
     setOpenDrawer(!openDrawer);
   };
 
+  const addProduct = (newProduct) => {
+    setProducts([...products,newProduct])
+  }
+
   return (
     <div className="max-w-[700px] px-5 lg:px-0 mx-auto min-h-screen flex flex-col">
       <Header />
       <CheckOutForm />
       <RecordTable />
       <Footer handlerDrawer={handlerDrawer} />
-      <Drawer products={products} handlerDrawer={handlerDrawer} openDrawer={openDrawer} />
+      <Drawer addProduct={addProduct} products={products} handlerDrawer={handlerDrawer} openDrawer={openDrawer} />
     </div>
   );
 };

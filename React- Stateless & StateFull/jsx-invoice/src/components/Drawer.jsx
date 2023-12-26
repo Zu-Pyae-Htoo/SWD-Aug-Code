@@ -2,7 +2,7 @@ import React from "react";
 import ProductGroup from "./ProductGroup";
 import ProductCreateForm from "./ProductCreateForm";
 
-const Drawer = ({openDrawer,handlerDrawer,products}) => {
+const Drawer = ({openDrawer,handlerDrawer,products,addProduct}) => {
   return (
     <div
       id="productDrawer"
@@ -31,7 +31,7 @@ const Drawer = ({openDrawer,handlerDrawer,products}) => {
         </button>
       </div>
       <ProductGroup products={products} />
-      <ProductCreateForm />
+      <ProductCreateForm addProduct={addProduct} />
     </div>
   );
 };
