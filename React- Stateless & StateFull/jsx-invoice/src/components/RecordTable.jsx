@@ -1,7 +1,7 @@
 import React from "react";
 import RecordGroup from "./RecordGroup";
 
-const RecordTable = ({ records }) => {
+const RecordTable = ({ records, removeRecord }) => {
   return (
     <section>
       <div className="relative shadow-md sm:rounded-lg overflow-hidden">
@@ -26,7 +26,7 @@ const RecordTable = ({ records }) => {
             </tr>
           </thead>
           <tbody>
-            <RecordGroup records={records} />
+            <RecordGroup removeRecord={removeRecord} records={records} />
           </tbody>
           <tfoot>
             <tr className="border-b text-black">

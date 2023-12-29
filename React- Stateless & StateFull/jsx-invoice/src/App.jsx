@@ -29,12 +29,13 @@ const App = () => {
   const [records, setRecords] = useState([]);
 
   const addRecord = (newRecord) => setRecords([...records, newRecord]);
-
+  const removeRecord = (id) =>
+    setRecords(records.filter((record) => record.id != id));
   return (
     <div className="max-w-[700px] px-5 lg:px-0 mx-auto min-h-screen flex flex-col">
       <Header />
       <CheckOutForm addRecord={addRecord} products={products} />
-      <RecordTable records={records} />
+      <RecordTable removeRecord={removeRecord} records={records} />
       <Footer handlerDrawer={handlerDrawer} />
       <Drawer
         addProduct={addProduct}

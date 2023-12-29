@@ -1,9 +1,19 @@
 import React from "react";
 
-const Record = ({record : {id,name,price,cost,quantity},index}) => {
+const Record = ({
+  record: { id, name, price, cost, quantity },
+  index,
+  removeRecord,
+}) => {
+  const handlerDelBtn = () => {
+    removeRecord(id);
+  };
   return (
-    <tr className="group text-black odd:bg-white  even:bg-gray-100 " product-id={3}>
-      <td className="px-6 py-4 td-counter">{index+1}</td>
+    <tr
+      className="group text-black odd:bg-white  even:bg-gray-100 "
+      product-id={3}
+    >
+      <td className="px-6 py-4 td-counter">{index + 1}</td>
       <th
         scope="row"
         className="record-name px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
@@ -48,7 +58,10 @@ const Record = ({record : {id,name,price,cost,quantity},index}) => {
       </td>
       <td className="px-6 py-4 text-end relative">
         <span className="record-cost">{cost.toFixed(2)}</span>
-        <button className="record-del group-hover:opacity-100 group-hover:pointer-events-auto duration-200 group-hover:left-3/4 absolute pointer-events-none opacity-0 left-full top-3 translate-x-2 active:scale-75 bg-blue-100 p-2 rounded-lg">
+        <button
+          onClick={handlerDelBtn}
+          className="record-del group-hover:opacity-100 group-hover:pointer-events-auto duration-200 group-hover:left-3/4 absolute pointer-events-none opacity-0 left-full top-3 translate-x-2 active:scale-75 bg-blue-100 p-2 rounded-lg"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
