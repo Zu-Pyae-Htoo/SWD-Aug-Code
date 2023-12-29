@@ -16,24 +16,32 @@ const App = () => {
     { id: 4, name: "Grapes", price: 2.5 },
   ];
 
-  const [products,setProducts] = useState(fruitArr);
-
+  const [products, setProducts] = useState(fruitArr);
 
   const handlerDrawer = () => {
     setOpenDrawer(!openDrawer);
   };
 
   const addProduct = (newProduct) => {
-    setProducts([...products,newProduct])
-  }
+    setProducts([...products, newProduct]);
+  };
+
+  const [records, setRecords] = useState([]);
+
+  const addRecord = (newRecord) => setRecords([...records, newRecord]);
 
   return (
     <div className="max-w-[700px] px-5 lg:px-0 mx-auto min-h-screen flex flex-col">
       <Header />
-      <CheckOutForm products={products} />
-      <RecordTable />
+      <CheckOutForm addRecord={addRecord} products={products} />
+      <RecordTable records={records} />
       <Footer handlerDrawer={handlerDrawer} />
-      <Drawer addProduct={addProduct} products={products} handlerDrawer={handlerDrawer} openDrawer={openDrawer} />
+      <Drawer
+        addProduct={addProduct}
+        products={products}
+        handlerDrawer={handlerDrawer}
+        openDrawer={openDrawer}
+      />
     </div>
   );
 };

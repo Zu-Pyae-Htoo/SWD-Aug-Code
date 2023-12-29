@@ -1,7 +1,7 @@
 import React from "react";
 import RecordGroup from "./RecordGroup";
 
-const RecordTable = () => {
+const RecordTable = ({ records }) => {
   return (
     <section>
       <div className="relative shadow-md sm:rounded-lg overflow-hidden">
@@ -26,15 +26,15 @@ const RecordTable = () => {
             </tr>
           </thead>
           <tbody>
-            <RecordGroup />
+            <RecordGroup records={records} />
           </tbody>
           <tfoot>
-            <tr className="border-b">
+            <tr className="border-b text-black">
               <td className="px-6 py-4 text-center" colSpan={4}>
                 Total
               </td>
               <td className="px-6 py-4 text-end" id="recordTotal">
-                5100
+                {records.reduce((pv, cv) => pv + cv.cost, 0).toFixed(2)}
               </td>
             </tr>
           </tfoot>
