@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import RecordGroup from "./RecordGroup";
+import { GeneralContext } from "../contexts/GeneralContextProvider";
 
-const RecordTable = ({ records, removeRecord }) => {
+const RecordTable = () => {
+  const { records } = useContext(GeneralContext);
   return (
     <section>
       <div className="relative shadow-md sm:rounded-lg overflow-hidden">
@@ -26,17 +28,18 @@ const RecordTable = ({ records, removeRecord }) => {
             </tr>
           </thead>
           <tbody>
-            <RecordGroup removeRecord={removeRecord} records={records} />
+            <RecordGroup />
           </tbody>
           <tfoot>
-            <tr className="border-b text-black">
+            {records.length > 0 && <tr className="border-b text-black">
               <td className="px-6 py-4 text-center" colSpan={4}>
                 Total
               </td>
               <td className="px-6 py-4 text-end" id="recordTotal">
+
                 {records.reduce((pv, cv) => pv + cv.cost, 0).toFixed(2)}
               </td>
-            </tr>
+            </tr>}
           </tfoot>
         </table>
       </div>

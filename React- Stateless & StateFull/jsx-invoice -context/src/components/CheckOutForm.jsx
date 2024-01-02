@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import { GeneralContext } from "../contexts/GeneralContextProvider";
 
-const CheckOutForm = ({ products, addRecord }) => {
+const CheckOutForm = () => {
+  const { products, addRecord } = useContext(GeneralContext);
   const idRef = useRef("");
   const quantityRef = useRef("");
   const handlerBuyBtn = () => {
@@ -17,6 +19,7 @@ const CheckOutForm = ({ products, addRecord }) => {
       quantity: quantityRef.current.valueAsNumber,
       cost,
     };
+
     addRecord(newRecord);
     idRef.current.value = "1";
     quantityRef.current.value = "";
