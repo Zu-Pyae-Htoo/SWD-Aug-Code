@@ -28,3 +28,20 @@ output.addEventListener("click", (event) => {
     localStorage.setItem("todo", output.innerHTML);
   }
 });
+
+const fruits = {
+  a: "apple",
+  b: "orange",
+  c: "mango",
+};
+
+console.log(fruits);
+
+// const fruitJson = JSON.stringify(fruits);
+// console.log(fruitJson);
+// const storedFruit = localStorage.setItem("my_fruit", fruitJson);
+// const getJson = localStorage.getItem("my_fruit");
+// console.log(JSON.parse(getJson));
+
+// const fruitObj = JSON.parse(json);
+// console.log(fruitObj);

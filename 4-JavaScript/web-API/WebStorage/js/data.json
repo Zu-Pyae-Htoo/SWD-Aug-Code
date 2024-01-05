@@ -1,0 +1,8 @@
+{
+  "name": "zu pyae htoo",
+  "age": 26,
+  "occupation": "unemployed",
+  "skill": ["videography", "html", "css", "js"],
+  "girlfriend": true,
+  "money": null
+}
