@@ -2,23 +2,33 @@ const output = document.querySelector("#output");
 const addBtn = document.querySelector("#addBtn");
 const inputText = document.querySelector("#inputText");
 
-(() => {
-  const todo = localStorage.getItem("todo");
-  if (todo) {
-    output.innerHTML = todo;
-  }
-})();
+const task = [];
 
-addBtn.addEventListener("click", () => {
+const listUi = (text) => {
   const li = document.createElement("li");
   const btn = document.createElement("button");
   btn.innerText = "del";
   btn.classList.add("del");
   li.append(btn);
-  const text = document.createTextNode(inputText.value);
-  li.append(text);
-  output.append(li);
-  localStorage.setItem("todo", output.innerHTML);
+  const textNode = document.createTextNode(text);
+  li.append(textNode);
+  return li;
+};
+
+(() => {
+  const todo = localStorage.getItem("todo");
+  if (todo) {
+    JSON.parse(todo).forEach((el) => {
+      output.append(listUi(el));
+      task.push(el);
+    });
+  }
+})();
+
+addBtn.addEventListener("click", () => {
+  task.push(inputText.value);
+  localStorage.setItem("todo", JSON.stringify(task));
+  output.append(listUi(inputText.value));
   inputText.value = null;
 });
 
@@ -29,13 +39,13 @@ output.addEventListener("click", (event) => {
   }
 });
 
-const fruits = {
-  a: "apple",
-  b: "orange",
-  c: "mango",
-};
+// const fruits = {
+//   a: "apple",
+//   b: "orange",
+//   c: "mango",
+// };
 
-console.log(fruits);
+// console.log(fruits);
 
 // const fruitJson = JSON.stringify(fruits);
 // console.log(fruitJson);
