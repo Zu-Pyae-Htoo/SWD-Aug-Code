@@ -29,7 +29,7 @@ const numbers = [4, 2, 5, 3, 2, 7, 1, 4];
 // const newResult = new Set(numbers);
 // console.log(newResult);
 
-// remove odd number from arr 
+// remove odd number from arr
 
 // let result = [];
 // for(x of numbers){
@@ -38,3 +38,28 @@ const numbers = [4, 2, 5, 3, 2, 7, 1, 4];
 // console.log(result);
 
 // console.log(numbers.filter(x => x%2 == 0));
+
+// const newMap = (arr, fun) => {
+//   const newArr = [];
+//   for (x of arr) {
+//     newArr.push(fun(x));
+//   }
+
+//   return newArr;
+// };
+
+// console.log(newMap(numbers, el => el*2));
+
+// const run = (arr, condition) => {
+//   const result = [];
+//   for (x of arr) {
+//     if (condition(x)) {
+//       result.push(x);
+//     }
+//   }
+//   return result;
+// };
+
+// const test = (el) => el % 2 === 0;
+// console.log(run(numbers, (el) => el % 2 === 0));
+// console.log(run(numbers,test));
